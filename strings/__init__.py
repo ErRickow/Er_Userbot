@@ -11,7 +11,7 @@ try:
 except ModuleNotFoundError:
     from pyUltroid.fns.tools import safe_load
 
-ULTConfig.lang = udB.get_key("language") or os.getenv("LANGUAGE", "en")
+ULTConfig.lang = udB.get_key("language") or os.getenv("LANGUAGE", "id")
 
 languages = {}
 PATH = "strings/strings/{}.yml"
@@ -21,7 +21,7 @@ def load(file):
     if not file.endswith(".yml"):
         return
     elif not os.path.exists(file):
-        file = PATH.format("en")
+        file = PATH.format("id")
     code = file.split("/")[-1].split("\\")[-1][:-4]
     try:
         languages[code] = safe_load(
@@ -36,12 +36,12 @@ load(PATH.format(ULTConfig.lang))
 
 
 def get_string(key: str, _res: bool = True) -> Any:
-    lang = ULTConfig.lang or "en"
+    lang = ULTConfig.lang or "id"
     try:
         return languages[lang][key]
     except KeyError:
         try:
-            en_ = languages["en"][key]
+            en_ = languages["id"][key]
             tr = translate(en_, lang_tgt=lang).replace("\ N", "\n")
             if en_.count("{}") != tr.count("{}"):
                 tr = en_
@@ -60,7 +60,7 @@ def get_string(key: str, _res: bool = True) -> Any:
             LOGS.exception(er)
         if not _res:
             return None
-        return languages["en"].get(key) or f"Failed to load language string '{key}'"
+        return languages["id"].get(key) or f"Failed to load language string '{key}'"
 
 
 def get_help(key):
