@@ -43,7 +43,7 @@ except ImportError:
 
 
 import asyncio
-import meriprocessing
+import multiprocessing
 from concurrent.futures import ThreadPoolExecutor
 from functools import partial, wraps
 
