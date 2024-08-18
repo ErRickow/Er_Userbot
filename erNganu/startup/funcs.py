@@ -347,7 +347,7 @@ async def customize():
             [
                 "https://graph.org/file/92cd6dbd34b0d1d73a0da.jpg",
                 "https://telegra.ph/file/d9b820a13d4a3950871ae.jpg",
-                "resources/extras/ultroid_assistant.jpg",
+                "bahan/extras/erasisstant.jpg",
             ]
         )
         if not os.path.exists(file):
