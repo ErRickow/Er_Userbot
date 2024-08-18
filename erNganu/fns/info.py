@@ -148,15 +148,15 @@ async def get_chat_info(chat, event):
     elif messages_sent_alt:
         caption += f"💬 <blockquote>Pesan dikirim: <code>{messages_sent_alt}</code> ⚠</blockquote>\n"
     if members is not None:
-        caption += f"👥 <b>Members:</b> <code>{members}</code>\n"
+        caption += f"👥 <blockquote>Members: <code>{members}</code></blockquote>\n"
     if admins:
-        caption += f"👮 <b>Administrators:</b> <code>{admins}</code>\n"
+        caption += f"👮 <blockquote>Administrators: <code>{admins}</code></blockquote>\n"
     if full.bot_info:
-        caption += f"🤖 <b>Bots:</b> <code>{len(full.bot_info)}</code>\n"
+        caption += f"🤖 <blockquote>Bots: <code>{len(full.bot_info)}</code></blockquote>\n"
     if members_online:
-        caption += f"👀 <b>Sedang Online:</b> <code>{members_online}</code>\n"
+        caption += f"👀 <blockquote>Sedang Online: <code>{members_online}</code></blockquote>\n"
     if restricted_users is not None:
-        caption += f"🔕 <b>Restricted users:</b> <code>{restricted_users}</code>\n"
+        caption += f"🔕 <blockquote>Restricted users: <code>{restricted_users}</code></blockquote>\n"
     if banned_users:
         caption += f"📨 <b>Banned users:</b> <code>{banned_users}</code>\n"
     if group_stickers:
