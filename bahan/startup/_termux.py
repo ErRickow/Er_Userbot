@@ -239,6 +239,6 @@ print(
     "\nFollow @pamerdong Kek bang."
 )
 sleep(0.5)
-print("\nMade with ❤️ by @chakszzz...")
+print("\nMade with ❤️ by @chakszzz & Ultroid...")
 
 system("pip3 uninstall -q colorama -y")
