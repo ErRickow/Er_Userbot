@@ -8,7 +8,7 @@ run_as_module = __package__ in sys.argv or sys.argv[0] == "-m"
 
 class ULTConfig:
     lang = "id"
-    thumb = "bahan/extras/ultroid.jpg"
+    thumb = "bahan/extras/er_userbot.jpg"
 
 
 if run_as_module:
@@ -17,7 +17,7 @@ if run_as_module:
     from .configs import Var
     from .startup import *
     from .startup._database import ErUbotDb
-    from .startup.BaseClient import ErUserbotClient
+    from .startup.BaseClient import ErUbotClient
     from .startup.connections import validate_session, vc_connection
     from .startup.funcs import _version_changes, autobot, enable_inline, update_envs
     from .version import eruserbot_version
@@ -59,7 +59,7 @@ if run_as_module:
 
             sys.exit()
     else:
-        eruser_bot = ErUserbotClient(
+        eruser_bot = ErUbotClient(
             validate_session(Var.SESSION, LOGS),
             udB=udB,
             app_version=eruserbot_version,
@@ -70,7 +70,7 @@ if run_as_module:
     if USER_MODE:
         asst = eruser_bot
     else:
-        asst = ErUserbotClient("asst", bot_token=udB.get_key("BOT_TOKEN"), udB=udB)
+        asst = ErUbotClient("asst", bot_token=udB.get_key("BOT_TOKEN"), udB=udB)
 
     if BOT_MODE:
         eruser_bot = asst
