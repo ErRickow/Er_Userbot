@@ -31,10 +31,10 @@ udB: Database
 Redis = udB.get_key
 con = TgConverter
 quotly = Quotly()
-OWNER_NAME = ultroid_bot.full_name
-OWNER_ID = ultroid_bot.uid
+OWNER_NAME = eruser_bot.full_name
+OWNER_ID = eruser_bot.uid
 
-ultroid_bot: UltroidClient
+eruser_bot: UltroidClient
 asst: UltroidClient
 
 LOG_CHANNEL = udB.get_key("LOG_CHANNEL")
