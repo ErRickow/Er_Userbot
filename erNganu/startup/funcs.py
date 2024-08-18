@@ -374,7 +374,7 @@ async def customize():
         await eruser_bot.send_message("botfather", UL)
         await asyncio.sleep(1)
         await eruser_bot.send_message(
-            "botfather", f"Allo gw Assistant Botnya {sir}"
+            "botfather", f"Allo, gw Assistant Botnya {sir}"
         )
         await asyncio.sleep(2)
         await eruser_bot.send_message("botfather", "/setdescription")
