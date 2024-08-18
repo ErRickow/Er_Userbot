@@ -98,7 +98,7 @@ check_python() {
 }
 
 clone_repo() {
-    # check if pyultroid, startup, plugins folders exist
+    # check if erNganu, startup, plugins folders exist
     cd $DIR
     if [ -d $DIR ]; then
         if [ -d $DIR/.git ]; then
@@ -190,7 +190,7 @@ dep_install() {
 
 main() {
     echo -e "Starting ErUbot Setup..."
-    if [ -d "pyUltroid" ] && [ -d "bahan" ] && [ -d "plugins" ]; then
+    if [ -d "erNganu" ] && [ -d "bahan" ] && [ -d "plugins" ]; then
         DIR=$CURRENT_DIR
     fi
     if [ -f $ENV_FILE_PATH ]
