@@ -8,7 +8,7 @@ run_as_module = __package__ in sys.argv or sys.argv[0] == "-m"
 
 class ULTConfig:
     lang = "id"
-    thumb = "resources/extras/ultroid.jpg"
+    thumb = "bahan/extras/ultroid.jpg"
 
 
 if run_as_module:
