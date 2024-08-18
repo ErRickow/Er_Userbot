@@ -1,5 +1,5 @@
 """
-Exceptions which can be raised by py-Ultroid Itself.
+Exceptions which can be raised by er-Nganu Itself.
 """
 
 
