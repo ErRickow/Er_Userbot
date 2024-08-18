@@ -123,7 +123,7 @@ async def startup_stuff():
         ERConfig.thumb = None
     GT = udB.get_key("GDRIVE_AUTH_TOKEN")
     if GT:
-        with open("resources/auth/gdrive_creds.json", "w") as t_file:
+        with open("bahan/auth/gdrive_creds.json", "w") as t_file:
             t_file.write(GT)
 
     if udB.get_key("AUTH_TOKEN"):
