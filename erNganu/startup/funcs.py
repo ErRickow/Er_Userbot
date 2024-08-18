@@ -106,14 +106,14 @@ def update_envs():
 async def startup_stuff():
     from .. import udB
 
-    x = ["bahan/auth", "bahan/downloads"]
+    x = ["resource/auth", "resource/downloads"]
     for x in x:
         if not os.path.isdir(x):
             os.mkdir(x)
 
     CT = udB.get_key("CUSTOM_THUMBNAIL")
     if CT:
-        path = "bahan/extras/thumbnail.jpg"
+        path = "resource/extras/thumbnail.jpg"
         ERConfig.thumb = path
         try:
             await download_file(CT, path)
@@ -123,7 +123,7 @@ async def startup_stuff():
         ERConfig.thumb = None
     GT = udB.get_key("GDRIVE_AUTH_TOKEN")
     if GT:
-        with open("bahan/auth/gdrive_creds.json", "w") as t_file:
+        with open("resource/auth/gdrive_creds.json", "w") as t_file:
             t_file.write(GT)
 
     if udB.get_key("AUTH_TOKEN"):
@@ -347,7 +347,7 @@ async def customize():
             [
                 "https://telegra.ph/file/15771c9453e29afcdaf70.jpg",
                 "https://graph.org/file/a97973ee0425b523cdc28.jpg",
-                "bahan/extras/ultroid_assistant.jpg",
+                "resource/extras/ultroid_assistant.jpg",
             ]
         )
         if not os.path.exists(file):
