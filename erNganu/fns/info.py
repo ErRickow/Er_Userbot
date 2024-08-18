@@ -124,7 +124,7 @@ async def get_chat_info(chat, event):
     caption = "ℹ️ <blockquote>[<u>CHAT INFO</u>]</blockquote>\n"
     caption += f"🆔 <blockquote>ID: <code>{chat.id}</code></blockquote>\n"
     if chat_title is not None:
-        caption += f"📛 <b>{chat_type} nama:</b> <code>{chat_title}</code>\n"
+        caption += f"📛 <blockquote>{chat_type} nama: <code>{chat_title}</code></blockquote>\n"
     if chat.username:
         caption += f"🔗 <b>Link:</b> @{chat.username}\n"
     else:
