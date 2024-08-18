@@ -12,10 +12,10 @@ from telethon.errors.rpcerrorlist import (
 )
 from telethon.tl.custom import Button
 
-from pyUltroid.dB._core import HELP, LIST
-from pyUltroid.fns.tools import cmd_regex_replace
+from erNganu.dB._core import HELP, LIST
+from erNganu.fns.tools import cmd_regex_replace
 
-from . import HNDLR, LOGS, OWNER_NAME, asst, get_string, inline_pic, udB, ultroid_cmd
+from . import HNDLR, LOGS, OWNER_NAME, asst, get_string, inline_pic, udB, erubot_cmd
 
 _main_help_menu = [
     [
@@ -36,7 +36,7 @@ _main_help_menu = [
 ]
 
 
-@ultroid_cmd(pattern="help( (.*)|$)")
+@erubot_cmd(pattern="help( (.*)|$)")
 async def _help(ult):
     plug = ult.pattern_match.group(1).strip()
     chat = await ult.get_chat()
