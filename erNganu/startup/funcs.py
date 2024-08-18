@@ -314,7 +314,7 @@ async def autopilot():
                 LOGS.exception(er)
     if isinstance(chat.photo, ChatPhotoEmpty):
         photo, _ = await download_file(
-            "https://graph.org/file/27c6812becf6f376cbb10.jpg", "channelphoto.jpg"
+            "https://telegra.ph/file/d0e52259884ecaf763d13.jpg", "channelphoto.jpg"
         )
         ll = await eruser_bot.upload_file(photo)
         try:
