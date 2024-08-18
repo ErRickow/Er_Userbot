@@ -109,7 +109,7 @@ def erubot_cmd(
                     time=10,
                 )
             try:
-                await dec(er)
+                await dec(tai)
             except FloodWaitError as fwerr:
                 await asst.send_message(
                     udB.get_key("LOG_CHANNEL"),
@@ -124,14 +124,14 @@ def erubot_cmd(
                 )
                 return
             except ChatSendInlineForbiddenError:
-                return await eod(er, "`Inline Locked In This Chat.`")
+                return await eod(tai, "`Inline Locked In This Chat.`")
             except (ChatSendMediaForbiddenError, ChatSendStickersForbiddenError):
-                return await eod(er, get_string("py_d8"))
+                return await eod(tai, get_string("py_d8"))
             except (BotMethodInvalidError, UserIsBotError):
-                return await eod(er, get_string("py_d6"))
+                return await eod(tai, get_string("py_d6"))
             except AlreadyInConversationError:
                 return await eod(
-                    er,
+                    tai,
                     get_string("py_d7"),
                 )
             except (BotInlineDisabledError, DependencyMissingError) as er:
@@ -265,10 +265,10 @@ def erubot_cmd(
             async def manager_cmd(er):
                 if not allow_all and not (await admin_check(er, require=require)):
                     return
-                if not allow_pm and er.is_private:
+                if not allow_pm and tai.is_private:
                     return
                 try:
-                    await dec(er)
+                    await dec(tai)
                 except Exception as er:
                     if chat := udB.get_key("MANAGER_LOG"):
                         text = f"**#MANAGER_LOG\n\nChat:** `{get_display_name(er.chat)}` `{er.chat_id}`"
