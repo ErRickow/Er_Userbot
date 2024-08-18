@@ -114,7 +114,7 @@ class MongoDB(_BaseDatabase):
         super().__init__()
 
     def __repr__(self):
-        return f"<Ultroid.MonGoDB\n -total_keys: {len(self.keys())}\n>"
+        return f"<ErUserbot.MonGoDB\n -total_keys: {len(self.keys())}\n>"
 
     @property
     def name(self):
