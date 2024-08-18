@@ -19,7 +19,7 @@ if run_as_module:
     from .startup._database import ErUbotDB
     from .startup.BaseClient import ErUbotClient
     from .startup.connections import validate_session, vc_connection
-    from .startup.funcs import _version_changes, autobot, enable_inline, update_envs
+    from bahan.startup.funcs import _version_changes, autobot, enable_inline, update_envs
     from .version import eruserbot_version
 
     if not os.path.exists("./plugins"):
