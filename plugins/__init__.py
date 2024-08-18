@@ -34,8 +34,8 @@ quotly = Quotly()
 OWNER_NAME = eruser_bot.full_name
 OWNER_ID = eruser_bot.uid
 
-eruser_bot: UltroidClient
-asst: UltroidClient
+eruser_bot: ErUbotClient
+asst: ErUbotClient
 
 LOG_CHANNEL = udB.get_key("LOG_CHANNEL")
 
