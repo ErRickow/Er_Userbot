@@ -38,7 +38,7 @@ DISCLAIMER_TEXT = ""
 COPYRIGHT = f"©️ Er Userbot {datetime.now().year}"
 
 HEADER = f"""{Fore.MAGENTA}
-Er Userbot Bruh...\n{ore.RESET}
+Er Userbot Bruh...\n{Fore.RESET}
 """
 
 INFO_TEXT = f"""
