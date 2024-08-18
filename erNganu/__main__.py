@@ -31,7 +31,7 @@ def main():
     ):
         eruser_bot.run_in_loop(bash("bash installer.sh"))
 
-        os.execl(sys.executable, sys.executable, "-m", "pyUltroid")
+        os.execl(sys.executable, sys.executable, "-m", "erNganu")
 
     eruser_bot.run_in_loop(startup_stuff())
 
