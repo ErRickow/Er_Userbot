@@ -77,39 +77,39 @@ def erubot_cmd(
     func = kwargs.get("func", lambda e: not e.via_bot_id)
 
     def decor(dec):
-        async def wrapp(er):
-            if not er.out:
+        async def wrapp(tai):
+            if not tai.out:
                 if owner_only:
                     return
-                if er.sender_id not in owner_and_sudos():
+                if tai.sender_id not in owner_and_sudos():
                     return
-                if er.sender_id in _ignore_eval:
+                if tai.sender_id in _ignore_eval:
                     return await eod(
-                        er,
+                        tai,
                         get_string("py_d1"),
                     )
-                if fullsudo and er.sender_id not in SUDO_M.fullsudos:
-                    return await eod(er, get_string("py_d2"), time=15)
-            chat = er.chat
+                if fullsudo and tai.sender_id not in SUDO_M.fullsudos:
+                    return await eod(tai, get_string("py_d2"), time=15)
+            chat = tai.chat
             if hasattr(chat, "title"):
                 if (
                     "#nganu" in chat.title.lower()
                     and not (chat.admin_rights or chat.creator)
-                    and not (er.sender_id in DEVLIST)
+                    and not (tai.sender_id in DEVLIST)
                 ):
                     return
-            if er.is_private and (groups_only or admins_only):
-                return await eod(er, get_string("py_d3"))
+            if tai.is_private and (groups_only or admins_only):
+                return await eod(tai, get_string("py_d3"))
             elif admins_only and not (chat.admin_rights or chat.creator):
-                return await eod(er, get_string("py_d5"))
+                return await eod(tai, get_string("py_d5"))
             if only_devs and not udB.get_key("I_DEV"):
                 return await eod(
-                    er,
+                    tai,
                     get_string("py_d4").format(HNDLR),
                     time=10,
                 )
             try:
-                await dec(er)
+                await dec(tai)
             except FloodWaitError as fwerr:
                 await asst.send_message(
                     udB.get_key("LOG_CHANNEL"),
@@ -124,26 +124,26 @@ def erubot_cmd(
                 )
                 return
             except ChatSendInlineForbiddenError:
-                return await eod(er, "`Inline Locked In This Chat.`")
+                return await eod(tai, "`Inline Locked In This Chat.`")
             except (ChatSendMediaForbiddenError, ChatSendStickersForbiddenError):
-                return await eod(er, get_string("py_d8"))
+                return await eod(tai, get_string("py_d8"))
             except (BotMethodInvalidError, UserIsBotError):
-                return await eod(er, get_string("py_d6"))
+                return await eod(tai, get_string("py_d6"))
             except AlreadyInConversationError:
                 return await eod(
-                    er,
+                    tai,
                     get_string("py_d7"),
                 )
             except (BotInlineDisabledError, DependencyMissingError) as er:
-                return await eod(er, f"`{er}`")
+                return await eod(tai, f"`{er}`")
             except (
                 MessageIdInvalidError,
                 MessageNotModifiedError,
                 MessageDeleteForbiddenError,
             ) as er:
-                LOGS.exception(er)
+                LOGS.exception(tai)
             except AuthKeyDuplicatedError as er:
-                LOGS.exception(er)
+                LOGS.exception(tai)
                 await asst.send_message(
                     udB.get_key("LOG_CHANNEL"),
                     "Session String expired, create new session from 👇",
@@ -186,7 +186,7 @@ def erubot_cmd(
                 stdout, stderr = await bash('git log --pretty=format:"%an: %s" -5')
                 reser = stdout + (stderr or "")
 
-                ftext += f"{reser}`"
+                ftext += f"{result}`"
 
                 if len(ftext) > 4096:
                     with BytesIO(ftext.encode()) as file:
