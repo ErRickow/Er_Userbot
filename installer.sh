@@ -3,12 +3,12 @@
 REPO="https://github.com/ErRickow/Er_Userbot.git"
 CURRENT_DIR="$(pwd)"
 ENV_FILE_PATH=".env"
-DIR="/root/TeamUltroid"
+DIR="/root/ErRickow"
 
 while [ $# -gt 0 ]; do
     case "$1" in
     --dir=*)
-        DIR="${1#*=}" || DIR="/root/TeamUltroid"
+        DIR="${1#*=}" || DIR="/root/ErRickow"
         ;;
     --branch=*)
         BRANCH="${1#*=}" || BRANCH="main"
@@ -102,7 +102,7 @@ clone_repo() {
     cd $DIR
     if [ -d $DIR ]; then
         if [ -d $DIR/.git ]; then
-            echo -e "Updating Er Useebot ${BRANCH}... "
+            echo -e "Updating ErUbot ${BRANCH}... "
             cd $DIR
             git pull
             currentbranch="$(git rev-parse --abbrev-ref HEAD)"
@@ -133,7 +133,7 @@ clone_repo() {
             export BRANCH="main"
         fi
         mkdir -p $DIR
-        echo -e "Cloning Er Userbot ${BRANCH}... "
+        echo -e "Cloning ErUbot ${BRANCH}... "
         git clone -b $BRANCH $REPO $DIR
     fi
 }
@@ -142,7 +142,7 @@ install_requirements() {
     pip3 install -q --upgrade pip
     echo -e "\n\nInstalling requirements... "
     pip3 install -q --no-cache-dir -r $DIR/requirements.txt
-    pip3 install -q -r $DIR/nganu/start/optional-requirements.txt
+    pip3 install -q -r $DIR/bahan/startup/optional-requirements.txt
 }
 
 railways_dep() {
@@ -189,8 +189,8 @@ dep_install() {
 }
 
 main() {
-    echo -e "Starting Er Userbot Setup..."
-    if [ -d "erNganu" ] && [ -d "nganu" ] && [ -d "plugins" ]; then
+    echo -e "Starting ErUbot Setup..."
+    if [ -d "pyUltroid" ] && [ -d "bahan" ] && [ -d "plugins" ]; then
         DIR=$CURRENT_DIR
     fi
     if [ -f $ENV_FILE_PATH ]
