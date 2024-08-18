@@ -16,7 +16,7 @@ if run_as_module:
 
     from .configs import Var
     from .startup import *
-    from .startup._database import ErUbotDb
+    from .startup._database import ErUbotDB
     from .startup.BaseClient import ErUbotClient
     from .startup.connections import validate_session, vc_connection
     from .startup.funcs import _version_changes, autobot, enable_inline, update_envs
@@ -32,7 +32,7 @@ if run_as_module:
     _er_cache = {}
     _ignore_eval = []
 
-    udB = ErUbotDb()
+    udB = ErUbotDB()
     update_envs()
 
     LOGS.info(f"Connecting to {udB.name}...")
