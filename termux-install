@@ -1,4 +1,4 @@
-if [ -d "resources" ]
+if [ -d "bahan" ]
 then
     echo "Current directory Identified.."
 else
