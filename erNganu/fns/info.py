@@ -158,13 +158,13 @@ async def get_chat_info(chat, event):
     if restricted_users is not None:
         caption += f"🔕 <blockquote>Restricted users: <code>{restricted_users}</code></blockquote>\n"
     if banned_users:
-        caption += f"📨 <b>Banned users:</b> <code>{banned_users}</code>\n"
+        caption += f"📨 <blockquote>Banned users: <code>{banned_users}</code></blockquote>\n"
     if group_stickers:
-        caption += f'📹 <b>{chat_type} stickers:</b> <a href="t.me/addstickers/{full.stickerset.short_name}">{group_stickers}</a>\n'
+        caption += f'📹 <blockquote>{chat_type} stickers: <a href="t.me/addstickers/{full.stickerset.short_name}">{group_stickers}</a></blockquote>\n'
     if not broadcast:
         if getattr(chat, "slowmode_enabled", None):
-            caption += f"👉 <b>Slow mode:</b> <code>True</code>"
-            caption += f", 🕐 <code>{full.slowmode_seconds}s</code>\n"
+            caption += f"👉 <blockquote>Slow mode: <code>True</code></blockquote>"
+            caption += f", 🕐<blockquote> <code>{full.slowmode_seconds}s</code></blockquote>\n"
         else:
             caption += f"🦸‍♂ <b>Supergroup:</b> {supergroup}\n"
     if getattr(chat, "restricted", None):
