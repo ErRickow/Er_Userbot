@@ -479,7 +479,7 @@ async def ready():
         BTTS = Button.inline("• Klik disini •", "initft_2")
         udB.set_key("INIT_DEPLOY", "Selesai")
     else:
-        MSG = f"**Er Userbot Telah Terdeploy!**\n➖➖➖➖➖➖➖➖➖➖\n**UserMode**: {inline_mention(eruser_bot.me)}\n**Assistant**: @{asst.me.username}\n➖➖➖➖➖➖➖➖➖➖\n**Support**: @panerdong\n➖➖➖➖➖➖➖➖➖➖"
+        MSG = f"**Er Userbot Telah Terdeploy!**\n➖➖➖➖➖➖➖➖➖➖\n**UserMode**: {inline_mention(eruser_bot.me)}\n**Assistant**: @{asst.me.username}\n➖➖➖➖➖➖➖➖➖➖\n**Support**: @pamerdong\n➖➖➖➖➖➖➖➖➖➖"
         BTTS, PHOTO = None, None
         prev_spam = udB.get_key("LAST_UPDATE_LOG_SPAM")
         if prev_spam:
