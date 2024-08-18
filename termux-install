@@ -4,6 +4,6 @@ then
 else
     apt install git -y
     git clone https://github.com/ErRickow/Er_Userbot.git
-    cd ErUserbot
+    cd Er_Userbot
 fi
-bash resources/startup/termux.sh
+bash bahan/startup/termux.sh
