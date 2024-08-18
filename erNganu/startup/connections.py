@@ -15,7 +15,7 @@ from telethon.sessions.string import _STRUCT_PREFORMAT, CURRENT_VERSION, StringS
 
 from ..configs import Var
 from . import *
-from .BaseClient import ErUserbotClient
+from .BaseClient import ErUbotClient
 
 _PYRO_FORM = {351: ">B?256sI?", 356: ">B?256sQ?", 362: ">BI?256sQ?"}
 
@@ -80,7 +80,7 @@ def vc_connection(udB, eruser_bot):
     if VC_SESSION and VC_SESSION != Var.SESSION:
         LOGS.info("Starting up VcClient.")
         try:
-            return ErUserbotClient(
+            return ErUbotClient(
                 validate_session(VC_SESSION, _exit=False),
                 log_attempt=False,
                 exit_on_error=False,
