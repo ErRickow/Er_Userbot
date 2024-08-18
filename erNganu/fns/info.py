@@ -146,7 +146,7 @@ async def get_chat_info(chat, event):
     if messages_sent:
         caption += f"💬 <blockquote>Pesan dikirim: <code>{messages_sent}</code></blockquote>\n"
     elif messages_sent_alt:
-        caption += f"💬 <b>Pesan dikirim:</b> <code>{messages_sent_alt}</code> ⚠\n"
+        caption += f"💬 <blockquote>Pesan dikirim: <code>{messages_sent_alt}</code> ⚠</blockquote>\n"
     if members is not None:
         caption += f"👥 <b>Members:</b> <code>{members}</code>\n"
     if admins:
