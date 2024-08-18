@@ -200,7 +200,7 @@ async def choose_cata(event):
             buttons = list(zip(btt[::2], btt[1::2]))
             if len(btt) % 2 == 1:
                 buttons.append((btt[-1],))
-            buttons.append([Button.inline("Cancel ❌", "delit")])
+            buttons.append([Button.inline("Batal ❌", "delit")])
             TR_BTS.update({"category": buttons})
         text = get_string("games_2")
     elif match[0] == "d":
@@ -260,7 +260,7 @@ async def choose_cata(event):
                     close_period=int(in_),
                 ),
                 correct_answers=[ansi],
-                solution="Join @TeamUltroid",
+                solution="Join @pamerdong",
                 solution_entities=[],
             )
             m_ = await event.client.send_message(chat, file=poll)
