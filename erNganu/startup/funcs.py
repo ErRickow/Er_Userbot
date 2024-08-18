@@ -346,7 +346,7 @@ async def customize():
         file = random.choice(
             [
                 "https://graph.org/file/92cd6dbd34b0d1d73a0da.jpg",
-                "https://graph.org/file/a97973ee0425b523cdc28.jpg",
+                "https://telegra.ph/file/d9b820a13d4a3950871ae.jpg",
                 "resources/extras/ultroid_assistant.jpg",
             ]
         )
