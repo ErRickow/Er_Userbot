@@ -134,7 +134,7 @@ async def get_chat_info(chat, event):
     elif creator_valid:
         caption += f'🖌 <blockquote>Creator: <a href="tg://user?id={creator_id}">{creator_firstname}</a></blockquote>\n'
     if created:
-        caption += f"🖌 <b>Created:</b> <code>{created.date().strftime('%b %d, %Y')} - {created.time()}</code>\n"
+        caption += f"🖌 <blockquote>Created: <code>{created.date().strftime('%b %d, %Y')} - {created.time()}</code></blockquote>\n"
     else:
         caption += f"🖌 <b>Created:</b> <code>{chat.date.date().strftime('%b %d, %Y')} - {chat.date.time()}</code> ⚠\n"
     caption += f"🗡 <b>Data Centre ID:</b> {dc_id}\n"
