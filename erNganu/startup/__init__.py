@@ -52,7 +52,7 @@ if run_as_module:
         os.remove(file)
 
     HOSTED_ON = where_hosted()
-    LOGS = getLogger("erBabiLogs")
+    LOGS = getLogger("erUbotLogs")
     TelethonLogger = getLogger("Telethon")
     TelethonLogger.setLevel(INFO)
 
