@@ -14,16 +14,16 @@ import requests
 from telethon import Button, events
 from telethon.tl import functions, types  # pylint:ignore
 
-from pyUltroid import *
-from pyUltroid._misc._assistant import asst_cmd, callback, in_pattern
-from pyUltroid._misc._decorators import ultroid_cmd
-from pyUltroid._misc._wrappers import eod, eor
-from pyUltroid.dB import DEVLIST, ULTROID_IMAGES
-from pyUltroid.fns.helper import *
-from pyUltroid.fns.misc import *
-from pyUltroid.fns.tools import *
-from pyUltroid.startup._database import _BaseDatabase as Database
-from pyUltroid.version import __version__, ultroid_version
+from erNganu import *
+from erNganu._misc._assistant import asst_cmd, callback, in_pattern
+from erNganu._misc._decorators import erubot_cmd
+from erNganu._misc._wrappers import eod, eor
+from erNganu.dB import DEVLIST, ULTROID_IMAGES
+from erNganu.fns.helper import *
+from erNganu.fns.misc import *
+from erNganu.fns.tools import *
+from erNganu.startup._database import _BaseDatabase as Database
+from erNganu.version import __version__, eruserbot_version
 from strings import get_help, get_string
 
 udB: Database
@@ -55,7 +55,7 @@ List = []
 Dict = {}
 InlinePlugin = {}
 N = 0
-cmd = ultroid_cmd
+cmd = erubot_cmd
 STUFF = {}
 
 # Chats, which needs to be ignore for some cases
