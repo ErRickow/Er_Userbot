@@ -170,7 +170,7 @@ if run_as_module:
             for i in HELP[plug]:
                 output += i
             output += "\n© @pamerdong"
-            await eod(ok, f"✓ `Er Userbot - Installed`: `{plug}` ✓\n\n{output}")
+            await eod(ok, f"<blockquote>✓ `Er Userbot - Installed`: `{plug}` ✓\n\n{output}</blockquote>")
         elif plug in CMD_HELP:
             output = f"Plugin Name-{plug}\n\n✘ Bantuan Commands-\n\n"
             output += str(CMD_HELP[plug])
