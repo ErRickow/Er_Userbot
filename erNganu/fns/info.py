@@ -136,11 +136,11 @@ async def get_chat_info(chat, event):
     if created:
         caption += f"🖌 <blockquote>Created: <code>{created.date().strftime('%b %d, %Y')} - {created.time()}</code></blockquote>\n"
     else:
-        caption += f"🖌 <b>Created:</b> <code>{chat.date.date().strftime('%b %d, %Y')} - {chat.date.time()}</code> ⚠\n"
-    caption += f"🗡 <b>Data Centre ID:</b> {dc_id}\n"
+        caption += f"🖌 <blockquote>Created: <code>{chat.date.date().strftime('%b %d, %Y')} - {chat.date.time()}</code> ⚠</blockquote>\n"
+    caption += f"🗡 <blockquote>Data Centre ID: {dc_id}</blockquote>\n"
     if exp_count is not None:
         chat_level = int((1 + math.sqrt(1 + 7 * exp_count / 14)) / 2)
-        caption += f"⭐️ <b>{chat_type} level:</b> <code>{chat_level}</code>\n"
+        caption += f"⭐️ <blockquote>{chat_type} level: <code>{chat_level}</code></blockquote>\n"
     if messages_viewable is not None:
         caption += f"💬 <b>Pesan Yang Kelihatan:</b> <code>{messages_viewable}</code>\n"
     if messages_sent:
