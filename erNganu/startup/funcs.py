@@ -106,14 +106,14 @@ def update_envs():
 async def startup_stuff():
     from .. import udB
 
-    x = ["nganu/auth", "nganu/downloads"]
+    x = ["bahan/auth", "bahan/downloads"]
     for x in x:
         if not os.path.isdir(x):
             os.mkdir(x)
 
     CT = udB.get_key("CUSTOM_THUMBNAIL")
     if CT:
-        path = "nganu/gambar/cater.jpg"
+        path = "bahan/extra/cater.jpg"
         ERConfig.thumb = path
         try:
             await download_file(CT, path)
