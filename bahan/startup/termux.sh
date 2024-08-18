@@ -1,4 +1,4 @@
-printf "Mengupdate sistem..\n\n"
+printf "Mengupdate sistem...\n\n"
 pkg update -y
 apt update
 apt upgrade -y
