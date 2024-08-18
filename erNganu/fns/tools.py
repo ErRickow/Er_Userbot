@@ -547,7 +547,7 @@ def telegraph_client():
     if TELEGRAPH:
         return TELEGRAPH[0]
 
-    from .. import udB, ultroid_bot
+    from .. import udB, eruser_bot
 
     token = udB.get_key("_TELEGRAPH_TOKEN")
     TELEGRAPH_DOMAIN = udB.get_key("GRAPH_DOMAIN")
@@ -555,11 +555,11 @@ def telegraph_client():
     if token:
         TELEGRAPH.append(TelegraphClient)
         return TelegraphClient
-    gd_name = ultroid_bot.full_name
+    gd_name = eruser_bot.full_name
     short_name = gd_name[:30]
     profile_url = (
-        f"https://t.me/{ultroid_bot.me.username}"
-        if ultroid_bot.me.username
+        f"https://t.me/{eruser_bot.me.username}"
+        if eruser_bot.me.username
         else "https://t.me/TeamUltroid"
     )
     try:
