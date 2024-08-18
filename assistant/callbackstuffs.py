@@ -340,7 +340,7 @@ async def changes(okk):
             if len(tl_chnglog) > 700:
                 tl_chnglog = f"{tl_chnglog[:700]}..."
                 button.append([Button.inline("View Complete", "changesall")])
-            await okk.edit("• Menulis Changelog 📝 •")
+            await okk.edit("<blockquote>• Menulis Changelog 📝 •</blockquote>")
             img = await Carbon(
                 file_name="changelog",
                 code=tl_chnglog,
