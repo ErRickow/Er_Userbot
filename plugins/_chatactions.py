@@ -12,24 +12,24 @@ from telethon.errors.rpcerrorlist import UserNotParticipantError
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.utils import get_display_name
 
-from pyUltroid.dB import stickers
-from pyUltroid.dB.echo_db import check_echo
-from pyUltroid.dB.forcesub_db import get_forcesetting
-from pyUltroid.dB.gban_mute_db import is_gbanned
-from pyUltroid.dB.greetings_db import get_goodbye, get_welcome, must_thank
-from pyUltroid.dB.nsfw_db import is_profan
-from pyUltroid.fns.helper import inline_mention
-from pyUltroid.fns.tools import async_searcher, create_tl_btn, get_chatbot_reply
+from erNganu.dB import stickers
+from erNganu.dB.echo_db import check_echo
+from erNganu.dB.forcesub_db import get_forcesetting
+from erNganu.dB.gban_mute_db import is_gbanned
+from erNganu.dB.greetings_db import get_goodbye, get_welcome, must_thank
+from erNganu.dB.nsfw_db import is_profan
+from erNganu.fns.helper import inline_mention
+from erNganu.fns.tools import async_searcher, create_tl_btn, get_chatbot_reply
 
 try:
     from ProfanityDetector import detector
 except ImportError:
     detector = None
-from . import LOG_CHANNEL, LOGS, asst, get_string, types, udB, ultroid_bot
+from . import LOG_CHANNEL, LOGS, asst, get_string, types, udB, eruser_bot
 from ._inline import something
 
 
-@ultroid_bot.on(events.ChatAction())
+@eruser_bot.on(events.ChatAction())
 async def Function(event):
     try:
         await DummyHandler(event)
@@ -63,12 +63,12 @@ async def DummyHandler(ult):
         if not user.bot:
             joinchat = get_forcesetting(ult.chat_id)
             try:
-                await ultroid_bot(GetParticipantRequest(int(joinchat), user.id))
+                await eruser_bot(GetParticipantRequest(int(joinchat), user.id))
             except UserNotParticipantError:
-                await ultroid_bot.edit_permissions(
+                await eruser_bot.edit_permissions(
                     ult.chat_id, user.id, send_messages=False
                 )
-                res = await ultroid_bot.inline_query(
+                res = await eruser_bot.inline_query(
                     asst.me.username, f"fsub {user.id}_{joinchat}"
                 )
                 await res[0].click(ult.chat_id, reply_to=ult.action_message.id)
@@ -193,7 +193,7 @@ async def DummyHandler(ult):
             await ult.reply(file=med)
 
 
-@ultroid_bot.on(events.NewMessage(incoming=True))
+@eruser_bot.on(events.NewMessage(incoming=True))
 async def chatBot_replies(e):
     sender = await e.get_sender()
     if not isinstance(sender, types.User) or sender.bot:
@@ -221,7 +221,7 @@ async def chatBot_replies(e):
             await e.delete()
 
 
-@ultroid_bot.on(events.Raw(types.UpdateUserName))
+@eruser_bot.on(events.Raw(types.UpdateUserName))
 async def uname_change(e):
     await uname_stuff(e.user_id, e.usernames[0] if e.usernames else None, e.first_name)
 
