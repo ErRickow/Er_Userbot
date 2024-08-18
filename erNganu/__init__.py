@@ -6,7 +6,7 @@ from .version import __version__
 run_as_module = __package__ in sys.argv or sys.argv[0] == "-m"
 
 
-class ERConfig:
+class ULTConfig:
     lang = "id"
     thumb = "bahan/extras/er_userbot.jpg"
 
