@@ -21,7 +21,7 @@ from telethon.errors.rpcerrorlist import (
     ChatSendMediaForbiddenError,
 )
 
-from pyUltroid.version import __version__ as UltVer
+from erNganu.version import __version__ as ErUbotVer
 
 from . import HOSTED_ON, LOGS
 
@@ -58,8 +58,8 @@ from . import (
     start_time,
     time_formatter,
     udB,
-    ultroid_cmd,
-    ultroid_version,
+    erubot_cmd,
+    eruserbot_version,
     updater,
 )
 
@@ -84,16 +84,16 @@ The Ultroid Userbot
   ◍ Telethon - {}
 """
 
-in_alive = "{}\n\n🌀 <b>Ultroid Version -><b> <code>{}</code>\n🌀 <b>PyUltroid -></b> <code>{}</code>\n🌀 <b>Python -></b> <code>{}</code>\n🌀 <b>Uptime -></b> <code>{}</code>\n🌀 <b>Branch -></b>[ {} ]\n\n• <b>Join @TeamUltroid</b>"
+in_alive = "{}\n\n🌀 <b>Ultroid Version -><b> <code>{}</code>\n🌀 <b>erNganu -></b> <code>{}</code>\n🌀 <b>Python -></b> <code>{}</code>\n🌀 <b>Uptime -></b> <code>{}</code>\n🌀 <b>Branch -></b>[ {} ]\n\n• <b>Join @TeamUltroid</b>"
 
 
 @callback("alive")
 async def alive(event):
-    text = alive_txt.format(ultroid_version, UltVer, __version__)
+    text = alive_txt.format(eruserbot_version, ErUbotVer, __version__)
     await event.answer(text, alert=True)
 
 
-@ultroid_cmd(
+@erubot_cmd(
     pattern="alive( (.*)|$)",
 )
 async def lol(ult):
@@ -122,8 +122,8 @@ async def lol(ult):
         parse = "html"
         als = in_alive.format(
             header,
-            f"{ultroid_version} [{HOSTED_ON}]",
-            UltVer,
+            f"{eruserbot_version} [{HOSTED_ON}]",
+            ErUbotVer,
             pyver(),
             uptime,
             kk,
@@ -136,8 +136,8 @@ async def lol(ult):
         als = (get_string("alive_1")).format(
             header,
             OWNER_NAME,
-            f"{ultroid_version} [{HOSTED_ON}]",
-            UltVer,
+            f"{eruserbot_version} [{HOSTED_ON}]",
+            ErUbotVer,
             uptime,
             pyver(),
             __version__,
@@ -180,7 +180,7 @@ async def lol(ult):
     )
 
 
-@ultroid_cmd(pattern="ping$", chats=[], type=["official", "assistant"])
+@erubot_cmd(pattern="ping$", chats=[], type=["official", "assistant"])
 async def _(event):
     start = time.time()
     x = await event.eor("Pong !")
@@ -189,7 +189,7 @@ async def _(event):
     await x.edit(get_string("ping").format(end, uptime))
 
 
-@ultroid_cmd(
+@erubot_cmd(
     pattern="cmds$",
 )
 async def cmds(event):
@@ -199,7 +199,7 @@ async def cmds(event):
 heroku_api = Var.HEROKU_API
 
 
-@ultroid_cmd(
+@erubot_cmd(
     pattern="restart$",
     fullsudo=True,
 )
@@ -214,10 +214,10 @@ async def restartbt(ult):
     if len(sys.argv) > 1:
         os.execl(sys.executable, sys.executable, "main.py")
     else:
-        os.execl(sys.executable, sys.executable, "-m", "pyUltroid")
+        os.execl(sys.executable, sys.executable, "-m", "erNganu")
 
 
-@ultroid_cmd(
+@erubot_cmd(
     pattern="shutdown$",
     fullsudo=True,
 )
@@ -225,7 +225,7 @@ async def shutdownbot(ult):
     await shutdown(ult)
 
 
-@ultroid_cmd(
+@erubot_cmd(
     pattern="logs( (.*)|$)",
     chats=[],
 )
@@ -268,7 +268,7 @@ async def inline_alive(ult):
     rep = xx.replace(".git", f"/tree/{y}")
     kk = f"<a href={rep}>{y}</a>"
     als = in_alive.format(
-        header, f"{ultroid_version} [{HOSTED_ON}]", UltVer, pyver(), uptime, kk
+        header, f"{eruserbot_version} [{HOSTED_ON}]", ErUbotVer, pyver(), uptime, kk
     )
 
     if _e := udB.get_key("ALIVE_EMOJI"):
@@ -308,7 +308,7 @@ async def inline_alive(ult):
     await ult.answer(result)
 
 
-@ultroid_cmd(pattern="update( (.*)|$)")
+@erubot_cmd(pattern="update( (.*)|$)")
 async def _(e):
     xx = await e.eor(get_string("upd_1"))
     if e.pattern_match.group(1).strip() and (
@@ -318,7 +318,7 @@ async def _(e):
         await bash("git pull -f && pip3 install -r requirements.txt")
         call_back()
         await xx.edit(get_string("upd_7"))
-        os.execl(sys.executable, "python3", "-m", "pyUltroid")
+        os.execl(sys.executable, "python3", "-m", "erNganu")
         # return
     m = await updater()
     branch = (Repo.init()).active_branch
