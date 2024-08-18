@@ -303,7 +303,7 @@ class RedisDB(_BaseDatabase):
 
 class LocalDB(_BaseDatabase):
     def __init__(self):
-        self.db = Database("ultroid")
+        self.db = Database("eruserbot")
         self.get = self.db.get
         self.set = self.db.set
         self.delete = self.db.delete
@@ -320,7 +320,7 @@ class LocalDB(_BaseDatabase):
         return f"<Ultroid.LocalDB\n -total_keys: {len(self.keys())}\n>"
 
 
-def ErUbotDB():
+def ErUbotDb():
     _er = False
     from .. import HOSTED_ON
 
