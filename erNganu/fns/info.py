@@ -142,9 +142,9 @@ async def get_chat_info(chat, event):
         chat_level = int((1 + math.sqrt(1 + 7 * exp_count / 14)) / 2)
         caption += f"⭐️ <blockquote>{chat_type} level: <code>{chat_level}</code></blockquote>\n"
     if messages_viewable is not None:
-        caption += f"💬 <b>Pesan Yang Kelihatan:</b> <code>{messages_viewable}</code>\n"
+        caption += f"💬 <blockquote>Pesan Yang Kelihatan: <code>{messages_viewable}</code></blockquote>\n"
     if messages_sent:
-        caption += f"💬 <b>Pesan dikirim:</b> <code>{messages_sent}</code>\n"
+        caption += f"💬 <blockquote>Pesan dikirim: <code>{messages_sent}</code></blockquote>\n"
     elif messages_sent_alt:
         caption += f"💬 <b>Pesan dikirim:</b> <code>{messages_sent_alt}</code> ⚠\n"
     if members is not None:
