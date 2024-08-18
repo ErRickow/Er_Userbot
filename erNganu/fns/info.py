@@ -121,8 +121,8 @@ async def get_chat_info(chat, event):
             admins = participants_admins.count if participants_admins else None
         except Exception as e:
             LOGS.info(f"Exception: {e}")
-    caption = "ℹ️ <b>[<u>CHAT INFO</u>]</b>\n"
-    caption += f"🆔 <b>ID:</b> <code>{chat.id}</code>\n"
+    caption = "ℹ️ <blockquote>[<u>CHAT INFO</u>]</blockquote>\n"
+    caption += f"🆔 <blockquote>ID: <code>{chat.id}</code></blockquote>\n"
     if chat_title is not None:
         caption += f"📛 <b>{chat_type} nama:</b> <code>{chat_title}</code>\n"
     if chat.username:
