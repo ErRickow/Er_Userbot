@@ -24,7 +24,7 @@ from ..configs import Var
 from . import *
 
 
-class ErUserbotClient(TelegramClient):
+class ErUbotClient(TelegramClient):
     def __init__(
         self,
         session,
