@@ -8,7 +8,7 @@ python_not_installed="$(python -c 'exit()')"
 # Install Python if n0t installed..
 if [ python_not_installed ]
 then
-    printf "Installing Python..\nThis may take some long...\n"
+    printf "Menginstall Python..\nMungkin butuh beberapa menit...\n"
     pkg install python3 -y
 fi
 
