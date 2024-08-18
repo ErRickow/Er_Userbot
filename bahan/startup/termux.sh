@@ -16,4 +16,4 @@ printf "*Bim salabim...*"
 pip install -q colorama
 
 printf "Running up Installation tool.\n"
-python nganu/start/_termux.py
+python bahan/startup/_termux.py
