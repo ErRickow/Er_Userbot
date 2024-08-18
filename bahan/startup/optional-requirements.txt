@@ -9,7 +9,6 @@ enhancer>=0.3.4
 git+https://github.com/buddhhu/img2html.git@c44170d#egg=img2html
 heroku3
 gitpython
-google-api-python-client
 htmlwebshot
 lottie
 numpy>=1.21.2
