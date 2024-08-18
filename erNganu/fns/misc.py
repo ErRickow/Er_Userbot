@@ -61,7 +61,7 @@ except ImportError:
 
 
 async def randomchannel(
-    tochat, channel, range1, range2, caption=None, client=ultroid_bot
+    tochat, channel, range1, range2, caption=None, client=eruser_bot
 ):
     do = randrange(range1, range2)
     async for x in client.iter_messages(channel, add_offset=do, limit=1):
