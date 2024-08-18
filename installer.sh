@@ -3,12 +3,12 @@
 REPO="https://github.com/ErRickow/Er_Userbot.git"
 CURRENT_DIR="$(pwd)"
 ENV_FILE_PATH=".env"
-DIR="/root/ErRickow"
+DIR="/root/TeamUltroid"
 
 while [ $# -gt 0 ]; do
     case "$1" in
     --dir=*)
-        DIR="${1#*=}" || DIR="/root/ErRickow"
+        DIR="${1#*=}" || DIR="/root/TeamUltroid"
         ;;
     --branch=*)
         BRANCH="${1#*=}" || BRANCH="main"
