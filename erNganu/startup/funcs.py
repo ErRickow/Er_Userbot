@@ -182,7 +182,7 @@ async def autobot():
     await asyncio.sleep(1)
     isdone = (await eruser_bot.get_messages(bf, limit=1))[0].text
     if not isdone.startswith("Bagus sayang."):
-        await eruser_bot.send_message(bf, "Asisstent Er Bot")
+        await eruser_bot.send_message(bf, "Asisstent Er Userbot")
         await asyncio.sleep(1)
         isdone = (await eruser_bot.get_messages(bf, limit=1))[0].text
         if not isdone.startswith("Bagus Sayang."):
