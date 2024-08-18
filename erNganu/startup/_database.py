@@ -320,7 +320,7 @@ class LocalDB(_BaseDatabase):
         return f"<Ultroid.LocalDB\n -total_keys: {len(self.keys())}\n>"
 
 
-def ErUbotDb():
+def ErUbotDB():
     _er = False
     from .. import HOSTED_ON
 
