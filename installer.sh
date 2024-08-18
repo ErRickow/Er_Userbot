@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-REPO="https://github.com/ErRickow/ErUserbot.git"
+REPO="https://github.com/ErRickow/Er_Userbot.git"
 CURRENT_DIR="$(pwd)"
 ENV_FILE_PATH=".env"
 DIR="/root/ErRickow"
@@ -207,7 +207,7 @@ main() {
     (railways_dep)
     (dep_install)
     (misc_install)
-    echo -e "\n\nSetup Completed."
+    echo -e "\n\nSetup Selesai."
 }
 
 if [ $NO_ROOT ]; then
