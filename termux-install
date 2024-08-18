@@ -3,7 +3,7 @@ then
     echo "Current directory Identified.."
 else
     apt install git -y
-    git clone https://github.com/ErRickow/ErUserbot.git
+    git clone https://github.com/ErRickow/Er_Userbot.git
     cd ErUserbot
 fi
 bash resources/startup/termux.sh
