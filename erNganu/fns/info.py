@@ -126,13 +126,13 @@ async def get_chat_info(chat, event):
     if chat_title is not None:
         caption += f"📛 <blockquote>{chat_type} nama: <code>{chat_title}</code></blockquote>\n"
     if chat.username:
-        caption += f"🔗 <b>Link:</b> @{chat.username}\n"
+        caption += f"🔗 <blockquote>Link: @{chat.username}</blockquote>\n"
     else:
-        caption += f"🗳 <b>{chat_type} type:</b> Private\n"
+        caption += f"🗳 <blockquote>{chat_type} type: Private</blockquote>\n"
     if creator_username:
-        caption += f"🖌 <b>Creator:</b> {creator_username}\n"
+        caption += f"🖌 <b>Creator: {creator_username}</blockquote>\n"
     elif creator_valid:
-        caption += f'🖌 <b>Creator:</b> <a href="tg://user?id={creator_id}">{creator_firstname}</a>\n'
+        caption += f'🖌 <blockquote>Creator: <a href="tg://user?id={creator_id}">{creator_firstname}</a></blockquote>\n'
     if created:
         caption += f"🖌 <b>Created:</b> <code>{created.date().strftime('%b %d, %Y')} - {created.time()}</code>\n"
     else:
