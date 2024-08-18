@@ -35,14 +35,14 @@ APT_PACKAGES = ["ffmpeg", "neofetch", "mediainfo"]
 
 DISCLAIMER_TEXT = ""
 
-COPYRIGHT = f"©️ Er Userbotd {datetime.now().year}"
+COPYRIGHT = f"©️ Er Userbot {datetime.now().year}"
 
 HEADER = f"""{Fore.MAGENTA}
 Er Userbot Bruh...\n{ore.RESET}
 """
 
 INFO_TEXT = f"""
-{Fore.GREEN}# Important points to know.
+{Fore.GREEN}# Yang perlu lu ketahui.
 
 {Fore.YELLOW}1. This script will just install basic requirements because of which some command whose requirements are missing won't work. You can view all optional requirements in (./resources/startup/optional-requirements.txt)
 
