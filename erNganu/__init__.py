@@ -63,7 +63,7 @@ if run_as_module:
             validate_session(Var.SESSION, LOGS),
             udB=udB,
             app_version=eruserbot_version,
-            device_model="ErUbot",
+            device_model="Er_Userbot",
         )
         eruser_bot.run_in_loop(autobot())
 
