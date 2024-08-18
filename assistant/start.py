@@ -71,7 +71,7 @@ async def own(event):
         msg += "\n\n• Powered by **@chakszzz**"
     await event.edit(
         msg,
-        buttons=[Button.inline("Close", data="closeit")],
+        buttons=[Button.inline("Tutup", data="closeit")],
         link_preview=False,
     )
 
