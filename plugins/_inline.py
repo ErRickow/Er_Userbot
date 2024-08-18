@@ -15,10 +15,10 @@ from telethon import Button
 from telethon.tl.types import InputWebDocument, Message
 from telethon.utils import resolve_bot_file_id
 
-from pyUltroid._misc._assistant import callback, in_pattern
-from pyUltroid.dB._core import HELP, LIST
-from pyUltroid.fns.helper import gen_chlog, time_formatter, updater
-from pyUltroid.fns.misc import split_list
+from erNganu._misc._assistant import callback, in_pattern
+from erNganu.dB._core import HELP, LIST
+from erNganu.fns.helper import gen_chlog, time_formatter, updater
+from erNganu.fns.misc import split_list
 
 from . import (
     HNDLR,
