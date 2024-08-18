@@ -25,6 +25,4 @@ requests
 tabulate
 telegraph
 tgcrypto
-youtube-search-python
-yt-dlp
 # -------------------------------------------------------#
