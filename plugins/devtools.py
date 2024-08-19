@@ -313,7 +313,7 @@ async def _(event):
                 parse_mode="html"
             )
         return await xx.delete()
-     xx.reply(final_output)
+     xx.eor(final_output)
 
 
 def _stringify(text=None, *args, **kwargs):
