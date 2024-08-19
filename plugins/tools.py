@@ -63,7 +63,7 @@ from telethon.tl.types import (
     DocumentAttributeVideo,
 )
 
-from pyUltroid.fns.tools import metadata, translate
+from erNganu.fns.tools import metadata, translate
 
 from . import (
     HNDLR,
