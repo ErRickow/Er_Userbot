@@ -209,7 +209,7 @@ if run_as_module:
         await event.client.send_file(
             event.chat_id,
             file="eruserbot-heroku.log",
-            thumb=erConfig.thumb,
+            thumb=ERConfig.thumb,
             caption="**Er Userbot Heroku Logs.**",
         )
 
@@ -220,7 +220,7 @@ if run_as_module:
         await er.respond(
             "**Er Userbot Logs.**",
             file=file,
-            thumb=erConfig.thumb,
+            thumb=ERConfig.thumb,
         )
 
     async def updateme_requirements():
