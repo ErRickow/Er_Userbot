@@ -383,10 +383,10 @@ async def customize():
         await asyncio.sleep(1)
         await eruser_bot.send_message(
             "botfather",
-            f"✨ Powerful Ultroid Assistant Bot ✨\n✨ Master ~ {sir} ✨\n\n✨ Powered By ~ @TeamUltroid ✨",
+            f"Er Userbot Assistant\nNganunya ~ {sir} \n\nSi Perusak @chakszzz,
         )
         await asyncio.sleep(2)
-        await msg.edit("Completed **Auto Customisation** at @BotFather.")
+        await msg.edit("Selesai **Auto Costumisasi** di @BotFather.")
         if rem:
             os.remove(file)
         LOGS.info("Customisation Done")
