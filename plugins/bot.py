@@ -183,10 +183,9 @@ async def lol(ult):
 @erubot_cmd(pattern="ping$", chats=[], type=["official", "assistant"])
 async def _(event):
     start = time.time()
-    x = await event.eor("Pong !")
     end = round((time.time() - start) * 1000)
     uptime = time_formatter((time.time() - start_time) * 1000)
-    await x.edit(get_string("ping").format(end, uptime), parse_mode='html')
+    await event.reply(get_string("ping").format(end, uptime), parse_mode='html')
 
 
 @erubot_cmd(
