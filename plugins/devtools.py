@@ -143,7 +143,7 @@ async def _(event):
                 stdout = f"`{stdout}`"
             out = f"**• OUTPUT:**\n{stdout}"
     if not stderr and not stdout:
-        out = "**• OUTPUT:**\n`Success`"
+        out = "**• OUTPUT:**\n`Sukses`"
     OUT += err + out
     if len(OUT) > 4096:
         ultd = err + out
