@@ -383,7 +383,7 @@ async def customize():
         await asyncio.sleep(1)
         await eruser_bot.send_message(
             "botfather",
-            f"Er Userbot Assistant\nNganunya ~ {sir} \n\nSi Perusak @chakszzz,
+            f"Er Userbot Assistant\nNganunya ~ {sir} \n\nSi Perusak @chakszzz",
         )
         await asyncio.sleep(2)
         await msg.edit("Selesai **Auto Costumisasi** di @BotFather.")
