@@ -171,11 +171,11 @@ def erubot_cmd(
                 ftext += f"`\n**Hosted At:** `{HOSTED_ON}`\n\n"
                 ftext += "--------START ErUserbot CRASH LOG--------"
                 ftext += "\n**Date:** `" + date
-                ftext += "`\n**Group:** `" + str(er.chat_id) + "` " + str(naam)
-                ftext += "\n**Sender ID:** `" + str(er.sender_id)
-                ftext += "`\n**Replied:** `" + str(er.is_reply)
+                ftext += "`\n**Group:** `" + str(tai.chat_id) + "` " + str(naam)
+                ftext += "\n**Sender ID:** `" + str(tai.sender_id)
+                ftext += "`\n**Replied:** `" + str(tai.is_reply)
                 ftext += "`\n\n**Event Trigger:**`\n"
-                ftext += str(er.text)
+                ftext += str(tai.text)
                 ftext += "`\n\n**Traceback info:**`\n"
                 ftext += str(format_exc())
                 ftext += "`\n\n**Error text:**`\n"
@@ -271,7 +271,7 @@ def erubot_cmd(
                     await dec(tai)
                 except Exception as er:
                     if chat := udB.get_key("MANAGER_LOG"):
-                        text = f"**#MANAGER_LOG\n\nChat:** `{get_display_name(er.chat)}` `{er.chat_id}`"
+                        text = f"**#MANAGER_LOG\n\nChat:** `{get_display_name(tai.chat)}` `{er.chat_id}`"
                         text += f"\n**Replied :** `{er.is_reply}`\n**Command :** {er.text}\n\n**Error :** `{er}`"
                         try:
                             return await asst.send_message(
