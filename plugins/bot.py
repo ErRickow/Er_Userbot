@@ -341,8 +341,8 @@ async def _(e):
             link_preview=False,
         )
     else:
-        await xx.edit(
-            f'<code>Your BOT is </code><strong>up-to-date</strong><code> with </code><strong><a href="https://github.com/TeamUltroid/Ultroid/tree/{branch}">[{branch}]</a></strong>',
+        await xx.reply(
+            f'<blockquote><code>Your BOT is </code><strong>up-to-date</strong><code> with </code><strong>nganu</a></strong></blockquote>',
             parse_mode="html",
             link_preview=False,
         )
