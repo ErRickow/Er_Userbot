@@ -307,10 +307,10 @@ async def autopilot():
                 )
             except ChatAdminRequiredError:
                 LOGS.info(
-                    "Failed to promote 'Assistant Bot' in 'Log Channel' due to 'Admin Privileges'"
+                    "Gagal untuk promote 'Assistant Bot' di 'Log Channel' karena 'Admin Privileges'"
                 )
             except BaseException as er:
-                LOGS.info("Error while promoting assistant in Log Channel..")
+                LOGS.info("Eror ketika jadikan admin Asisstent..")
                 LOGS.exception(er)
     if isinstance(chat.photo, ChatPhotoEmpty):
         photo, _ = await download_file(
