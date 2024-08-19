@@ -397,7 +397,7 @@ sudo_4: "`Bot tidak dapat ditambahkan sebagai Pengguna Sudo.`"
 unspl_1: "Tidak ada hasil yang ditemukan!"
 
 # updater
-upd_1: "`Memeriksa pembaruan, harap tunggu....`"
+upd_1: "`Memeriksa pembaruan, bentar ya anjing....`"
 upd_2: "`Oops.. Updater tidak dapat melanjutkan karena beberapa masalah.`\n\n**LOGTRACE:**\n"
 upd_3: "**Tersedia PEMBARUAN Ultroid untuk Branch [[{}]]({}/tree/{}):\n\nPERUBAHAN:**\n\n{}"
 upd_4: "`Perubahan log terlalu besar, lihat file untuk melihatnya.`"
