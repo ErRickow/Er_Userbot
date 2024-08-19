@@ -165,7 +165,7 @@ async def _(event):
 
 
 pp = pprint  # ignore: pylint
-bot = ultroid = ultroid_bot
+bot = eruserbot = eruser_bot
 
 
 class u:
@@ -238,7 +238,7 @@ async def _(event):
             pass
     reply_to_id = event.reply_to_msg_id or event
     if any(item in cmd for item in KEEP_SAFE().All) and (
-        not (event.out or event.sender_id == ultroid_bot.uid)
+        not (event.out or event.sender_id == eruser_bot.uid)
     ):
         warning = await event.forward_to(udB.get_key("LOG_CHANNEL"))
         await warning.reply(
