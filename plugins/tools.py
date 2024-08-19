@@ -96,7 +96,7 @@ async def _(event):
         return await eor(
             event, f"`{HNDLR}tr LanguageCode` as reply to a message", time=5
         )
-    lan = input or "en"
+    lan = input or "id"
     try:
         tt = translate(text, lang_tgt=lan)
         output_str = f"**TRANSLATED** to {lan}\n{tt}"
