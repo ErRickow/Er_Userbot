@@ -18,7 +18,7 @@ from pprint import pprint
 
 from telethon.utils import get_display_name
 
-from pyUltroid import _ignore_eval
+from erNganu import _ignore_eval
 
 from . import *
 
@@ -32,7 +32,7 @@ from random import choice
 try:
     from yaml import safe_load
 except ImportError:
-    from pyUltroid.fns.tools import safe_load
+    from erNganu.fns.tools import safe_load
 try:
     from telegraph import upload_file as uf
 except ImportError:
@@ -42,7 +42,7 @@ from telethon.tl import functions
 fn = functions
 
 
-@ultroid_cmd(
+@erubot_cmd(
     pattern="sysinfo$",
 )
 async def _(e):
@@ -61,7 +61,7 @@ async def _(e):
     remove("neo.txt")
 
 
-@ultroid_cmd(pattern="bash", fullsudo=True, only_devs=True)
+@erubot_cmd(pattern="bash", fullsudo=True, only_devs=True)
 async def _(event):
     carb, rayso, yamlf = None, None, False
     try:
@@ -196,7 +196,7 @@ def _parse_eval(value=None):
     return str(value)
 
 
-@ultroid_cmd(pattern="eval", fullsudo=True, only_devs=True)
+@erubot_cmd(pattern="eval", fullsudo=True, only_devs=True)
 async def _(event):
     try:
         cmd = event.text.split(maxsplit=1)[1]
@@ -347,7 +347,7 @@ int main(){
 """
 
 
-@ultroid_cmd(pattern="cpp", only_devs=True)
+@erubot_cmd(pattern="cpp", only_devs=True)
 async def doie(e):
     match = e.text.split(" ", maxsplit=1)
     try:
