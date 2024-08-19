@@ -33,7 +33,7 @@ async def _(tai):
         )
 
     except BaseException:
-        await ult.eor(get_string("com_7"))
+        await tai.eor(get_string("com_7"))
 
 
 @erubot_cmd(pattern="deldb( (.*)|$)", fullsudo=True)
