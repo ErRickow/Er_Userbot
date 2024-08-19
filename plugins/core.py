@@ -43,7 +43,7 @@ async def unload(event):
     elif zym in os.listdir("plugins"):
         return await event.eor(get_string("core_11"), time=3)
     else:
-        await event.eor(f"**Nᴏ Pʟᴜɢɪɴ Nᴀᴍᴇᴅ** `{shortname}`", time=3)
+        await event.reply(f"**Nᴏ Pʟᴜɢɪɴ Nᴀᴍᴇᴅ** `{shortname}`", time=3)
 
 
 @erubot_cmd(
