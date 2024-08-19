@@ -312,6 +312,10 @@ async def inline_alive(ult):
     await ult.answer(result)
 
 
+@erubot_cmd(pattern="up( (.*)|$)")
+async def anu(y):
+  au = await y.reply(get_string("upd_1"))
+
 @erubot_cmd(pattern="update( (.*)|$)")
 async def _(e):
     xx = await e.reply(get_string("upd_1"))
