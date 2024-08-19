@@ -239,7 +239,7 @@ async def _(event):
     if opt == "heroku":
         await heroku_logs(event)
     elif opt == "carbon" and Carbon:
-        event = await event.eor(get_string("com_1"))
+        event = await event.reply(get_string("com_1"))
         with open(file, "r") as f:
             code = f.read()[-2500:]
         file = await Carbon(
