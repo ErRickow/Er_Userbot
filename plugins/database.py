@@ -13,14 +13,14 @@ __doc__ = get_help("help_database")
 
 import re
 
-from . import Redis, eor, get_string, udB, ultroid_cmd
+from . import Redis, eor, get_string, udB, erubot_cmd
 
 
-@ultroid_cmd(pattern="setdb( (.*)|$)", fullsudo=True)
-async def _(ult):
-    match = ult.pattern_match.group(1).strip()
+@erubot_cmd(pattern="setdb( (.*)|$)", fullsudo=True)
+async def _(tai):
+    match = tai.pattern_match.group(1).strip()
     if not match:
-        return await ult.eor("Provide key and value to set!")
+        return await tai.eor("Provide key and value to set!")
     try:
         delim = " " if re.search("[|]", match) is None else " | "
         data = match.split(delim, maxsplit=1)
@@ -28,7 +28,7 @@ async def _(ult):
             data = data[1].split(maxsplit=1)
             data[1] = f"{str(udB.get_key(data[0]))} {data[1]}"
         udB.set_key(data[0], data[1])
-        await ult.eor(
+        await ult.reply(
             f"**DB Key Value Pair Updated\nKey :** `{data[0]}`\n**Value :** `{data[1]}`"
         )
 
@@ -36,7 +36,7 @@ async def _(ult):
         await ult.eor(get_string("com_7"))
 
 
-@ultroid_cmd(pattern="deldb( (.*)|$)", fullsudo=True)
+@erubot_cmd(pattern="deldb( (.*)|$)", fullsudo=True)
 async def _(ult):
     key = ult.pattern_match.group(1).strip()
     if not key:
@@ -56,7 +56,7 @@ async def _(ult):
         await ult.eor(get_string("com_7"))
 
 
-@ultroid_cmd(pattern="rendb( (.*)|$)", fullsudo=True)
+@erubot_cmd(pattern="rendb( (.*)|$)", fullsudo=True)
 async def _(ult):
     match = ult.pattern_match.group(1).strip()
     if not match:
