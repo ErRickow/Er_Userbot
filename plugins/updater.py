@@ -73,9 +73,9 @@ async def _(e):
     m = await updater()
     branch = (Repo.init()).active_branch
     if m:
-        x = await e.send_file(
+        x = await event.client.send_file(
             caption="• **Tersedia Update** •",
-            force_document=False,
+            force_document=True,
             buttons=Button.inline("Changelogs", data="changes"),
         )
         Link = x.message_link
