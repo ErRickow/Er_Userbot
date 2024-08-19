@@ -275,7 +275,7 @@ async def autopilot():
         try:
             await eruser_bot(InviteToChannelRequest(int(channel), [asst.me.username]))
         except BaseException as er:
-            LOGS.info("Error while Adding Assistant to Log Channel")
+            LOGS.info("Error ketika menambahkan assistant bot lu ke log group")
             LOGS.exception(er)
             assistant = False
     except BaseException as er:
@@ -286,7 +286,7 @@ async def autopilot():
             achat = await asst.get_entity(int(channel))
         except BaseException as er:
             achat = None
-            LOGS.info("Error while getting Log channel from Assistant")
+            LOGS.info("Error ketika mendapatkan log channel dari group")
             LOGS.exception(er)
         if achat and not achat.admin_rights:
             rights = ChatAdminRights(
