@@ -7,8 +7,8 @@
 """
 ✘ Commands Available -
 
-• `{i}a` or `{i}approve`
-    Approve someone to PM.
+• `{i}baik` or `{i}y`
+    Setujui seseorang untuk PM.
 
 • `{i}da` or `{i}disapprove`
     Disapprove someone to PM.
@@ -89,8 +89,8 @@ if udB.get_key("PM_TEXT"):
 # 1
 WARNS = udB.get_key("PMWARNS") or 4
 PMCMDS = [
-    f"{HNDLR}a",
-    f"{HNDLR}approve",
+    f"{HNDLR}y",
+    f"{HNDLR}baik",
     f"{HNDLR}da",
     f"{HNDLR}disapprove",
     f"{HNDLR}block",
@@ -131,7 +131,7 @@ if udB.get_key("PMLOG"):
     )
     async def _(e):
         if not e.is_private:
-            return await e.eor("`Use me in Private.`", time=3)
+            return await e.eor("`Gunakan di private chat.`", time=3)
         if not Logm.contains(e.chat_id):
             return await e.eor("`Wasn't logging msgs from here.`", time=3)
 
