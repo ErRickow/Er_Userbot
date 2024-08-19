@@ -475,7 +475,7 @@ async def ready():
     if not udB.get_key("INIT_DEPLOY"):  # Detailed Message at Initial Deploy
         MSG = """🎇 **Terimakasih Telah Deploy Er Userbot!**
 • Ini Basic stuff tentang cara penggunaan userbotnya."""
-        PHOTO = "https://graph.org/file/54a917cc9dbb94733ea5f.jpg"
+        PHOTO = "https://telegra.ph/file/c22cea683a0c0dd603fb1.jpg"
         BTTS = Button.inline("• Klik disini •", "initft_2")
         udB.set_key("INIT_DEPLOY", "Selesai")
     else:
