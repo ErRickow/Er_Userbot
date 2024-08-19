@@ -113,7 +113,7 @@ async def startup_stuff():
 
     CT = udB.get_key("CUSTOM_THUMBNAIL")
     if CT:
-        path = "bahan/extras/cater.jpg"
+        path = "bahan/extra/cater.jpg"
         ERConfig.thumb = path
         try:
             await download_file(CT, path)
