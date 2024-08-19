@@ -363,7 +363,7 @@ async def customize():
         await asyncio.sleep(1)
         isdone = (await eruser_bot.get_messages("botfather", limit=1))[0].text
         if isdone.startswith("Invalid bot"):
-            LOGS.info("Error while trying to customise assistant, skipping...")
+            LOGS.info("Error ketika mengkostum Assistant, skipping...")
             return
         await eruser_bot.send_message("botfather", UL)
         await asyncio.sleep(1)
@@ -374,7 +374,7 @@ async def customize():
         await eruser_bot.send_message("botfather", UL)
         await asyncio.sleep(1)
         await eruser_bot.send_message(
-            "botfather", f"✨ Hello ✨!! I'm Assistant Bot of {sir}"
+            "botfather", f"Allo gw Assistant Botnya {sir}"
         )
         await asyncio.sleep(2)
         await eruser_bot.send_message("botfather", "/setdescription")
