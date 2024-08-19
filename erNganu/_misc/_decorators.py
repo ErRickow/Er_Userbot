@@ -184,7 +184,7 @@ def erubot_cmd(
                 ftext += "\n\n\n**Last 5 commits:**`\n"
 
                 stdout, stderr = await bash('git log --pretty=format:"%an: %s" -5')
-                reser = stdout + (stderr or "")
+                result = stdout + (stderr or "")
 
                 ftext += f"{result}`"
 
