@@ -240,27 +240,27 @@ async def autopilot():
             )
 
         if eruser_bot._bot:
-            msg_ = "'LOG_CHANNEL' not found! Add it in order to use 'BOTMODE'"
+            msg_ = "'LOG_CHANNEL' tidak ditemukan! Tambahkan jikalau mau pake 'BOTMODE'"
             LOGS.error(msg_)
             return await _save(msg_)
-        LOGS.info("Creating a Log Channel for You!")
+        LOGS.info("Membuatkan Logs Channel untuk lu!")
         try:
             r = await eruser_bot(
                 CreateChannelRequest(
-                    title="My Ultroid Logs",
-                    about="My Ultroid Log Group\n\n Join @TeamUltroid",
+                    title="Er Userbot Log",
+                    about="Er Userbot Log Groups\n\n Join @pamerdong",
                     megagroup=True,
                 ),
             )
         except ChannelsTooMuchError as er:
             LOGS.critical(
-                "You Are in Too Many Channels & Groups , Leave some And Restart The Bot"
+                "Lu terlalu banyak channel/group keluarkan dulu beberapa lalu restart botnya"
             )
             return await _save(str(er))
         except BaseException as er:
             LOGS.exception(er)
             LOGS.info(
-                "Something Went Wrong , Create A Group and set its id on config var LOG_CHANNEL."
+                "Ada kesalahan!! buat bot sendiri di @BotFather dan copy token bot sebagai vars BOT_TOKEN, dan restart."
             )
 
             return await _save(str(er))
