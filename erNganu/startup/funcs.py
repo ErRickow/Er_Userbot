@@ -486,9 +486,9 @@ async def ready():
             try:
                 await eruser_bot.delete_messages(chat_id, int(prev_spam))
             except Exception as E:
-                LOGS.info("Error while Deleting Previous Update Message :" + str(E))
+                LOGS.info("Error ketika menghapus update sebelumnya :" + str(E))
         if await updater():
-            BTTS = Button.inline("Update Available", "updtavail")
+            BTTS = Button.inline("Update Tersedia Cok", "updtavail")
 
     try:
         spam_sent = await asst.send_message(chat_id, MSG, file=PHOTO, buttons=BTTS)
