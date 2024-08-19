@@ -68,23 +68,23 @@ def ULTPIC():
     return inline_pic() or choice(ULTROID_IMAGES)
 
 
-buttons = [
-    [
-        Button.url(get_string("bot_3"), "https://github.com/TeamUltroid/Ultroid"),
-        Button.url(get_string("bot_4"), "t.me/UltroidSupportChat"),
-    ]
-]
+#buttons = [
+#    [
+#        Button.url(get_string("bot_3"), "https://github.com/TeamUltroid/Ultroid"),
+       # Button.url(get_string("bot_4"), "t#.me/UltroidSupportChat"),
+   # ]
+#]#
 
 # Will move to strings
 alive_txt = """
-The Ultroid Userbot
+The Er Userbot
 
   ◍ Version - {}
-  ◍ Py-Ultroid - {}
+  ◍ Er-Nganu - {}
   ◍ Telethon - {}
 """
 
-in_alive = "{}\n\n🌀 <b>Ultroid Version -><b> <code>{}</code>\n🌀 <b>erNganu -></b> <code>{}</code>\n🌀 <b>Python -></b> <code>{}</code>\n🌀 <b>Uptime -></b> <code>{}</code>\n🌀 <b>Branch -></b>[ {} ]\n\n• <b>Join @TeamUltroid</b>"
+in_alive = "{}\n\n🌀 <blockquote>Er Userbot Version -><blockquote> <code>{}</code>\n🌀 <blockquote>erNganu -></blockquote> <code>{}</code>\n🌀 <b>Python -></blockquote> <code>{}</code>\n🌀 <blockquote>Uptime -></blockquote> <code>{}</code>\n🌀 <blockquote>Branch -></blockquote>[ {} ]\n\n• <blockquote>Join @Pamerdong</b>"
 
 
 @callback("alive")
