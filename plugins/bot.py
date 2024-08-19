@@ -186,7 +186,7 @@ async def _(event):
     x = await event.eor("Pong !")
     end = round((time.time() - start) * 1000)
     uptime = time_formatter((time.time() - start_time) * 1000)
-    await x.edit(get_string("ping").format(end, uptime))
+    await x.edit(get_string("ping").format(end, uptime), parse_mode='html')
 
 
 @erubot_cmd(
