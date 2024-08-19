@@ -6,13 +6,13 @@ authors:
   - mrismanaziz
 
 # commons
-com_1: "`Sedang Memproses...`"
+com_1: "`Bentar njing...`"
 com_2: "`Sedang Mencari...`"
-com_3: "`Yang anda Masukan Tidak Valid`"
+com_3: "`Lu goblok Kaga Valid COK`"
 com_4: "`Media Tidak Didukung..`"
 com_5: "`Mengunduh...`"
 com_6: "`Mengunggah...`"
-com_7: "`Maaf Telah Terjadi ERROR`"
+com_7: "`Jadi ERROR TOLOL`"
 
 # chatactions
 can_1: "**#GBanned_User** Bergabung.\n\n**User** : {}\n**Karena**: {}\n\n`Pengguna dibanned.`"
