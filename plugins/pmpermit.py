@@ -399,7 +399,7 @@ if udB.get_key("PMSETTING"):
             except Exception as mm:
                 await e.eor(str(mm), time=5)
 
-    @ultroid_cmd(pattern="(a|approve)(?: |$)", fullsudo=True)
+    @ultroid_cmd(pattern="(y|baik)(?: |$)", fullsudo=True)
     async def approvepm(apprvpm):
         if apprvpm.reply_to_msg_id:
             user = (await apprvpm.get_reply_message()).sender
@@ -410,7 +410,7 @@ if udB.get_key("PMSETTING"):
         if user.id in DEVLIST:
             return await eor(
                 apprvpm,
-                "Lol, He is my Developer\nHe is auto Approved",
+                "TOLOL, dia adalah Developer gw\nDia auto setujui",
             )
         if not keym.contains(user.id):
             keym.add(user.id)
@@ -421,7 +421,7 @@ if udB.get_key("PMSETTING"):
                 pass
             await eod(
                 apprvpm,
-                f"<b>{inline_mention(user, html=True)}</b> <code>approved to PM!</code>",
+                f"<blockquote>{inline_mention(user, html=True)}</blockquote> <code>approved to PM!</code>",
                 parse_mode="html",
             )
             try:
