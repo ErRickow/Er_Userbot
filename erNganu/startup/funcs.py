@@ -347,7 +347,7 @@ async def customize():
             [
                 "https://telegra.ph/file/f35111938459684c20dfe.jpg",
                 "https://telegra.ph/file/0ba5447759e13546a3122.jpg",
-                "bahan/extras/erassistant.jpg",
+                "bahan/extra/erassistant.jpg",
             ]
         )
         if not os.path.exists(file):
