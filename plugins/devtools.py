@@ -61,7 +61,7 @@ async def _(e):
     remove("neo.txt")
 
 
-@erubot_cmd(pattern="bash", fullsudo=True, only_devs=True)
+@erubot_cmd(pattern="sh", fullsudo=True, only_devs=True)
 async def _(event):
     carb, rayso, yamlf = None, None, False
     try:
