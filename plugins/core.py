@@ -29,14 +29,14 @@ async def install(event):
 async def unload(event):
     shortname = event.pattern_match.group(1).strip()
     if not shortname:
-        await event.eor(get_string("core_9"))
+        await event.reply(get_string("core_9"))
         return
     lsd = os.listdir("addons")
     zym = f"{shortname}.py"
     if zym in lsd:
         try:
             un_plug(shortname)
-            await event.reply(f"**Uɴʟᴏᴀᴅᴇᴅ** `{shortname}` **Sᴜᴄᴄᴇssғᴜʟʟʏ.**", time=3)
+            await event.eor(f"**Uɴʟᴏᴀᴅᴇᴅ** `{shortname}` **Sᴜᴄᴄᴇssғᴜʟʟʏ.**", time=3)
         except Exception as ex:
             LOGS.exception(ex)
             return await event.eor(str(ex))
