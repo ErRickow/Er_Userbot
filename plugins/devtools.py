@@ -310,10 +310,9 @@ async def _(event):
                 allow_cache=False,
                 caption=f"<blockquote>{cmd}</blockquote>" if len(cmd) < 998 else None,
                 reply_to=reply_to_id,
-                parse_mode="html"
             )
         return await xx.delete()
-     xx.eor(final_output)
+     xx.reply(final_output, parse_mode='html')
 
 
 def _stringify(text=None, *args, **kwargs):
