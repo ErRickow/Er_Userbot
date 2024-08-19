@@ -78,10 +78,10 @@ from . import (
     get_string,
 )
 from . import humanbytes as hb
-from . import inline_mention, is_url_ok, json_parser, mediainfo, ultroid_cmd
+from . import inline_mention, is_url_ok, json_parser, mediainfo, erubot_cmd
 
 
-@ultroid_cmd(pattern="tr( (.*)|$)", manager=True)
+@erubot_cmd(pattern="tr( (.*)|$)", manager=True)
 async def _(event):
     input = event.pattern_match.group(1).strip().split(maxsplit=1)
     txt = input[1] if len(input) > 1 else None
@@ -106,7 +106,7 @@ async def _(event):
         await event.eor(str(exc), time=5)
 
 
-@ultroid_cmd(
+@erubot_cmd(
     pattern="id( (.*)|$)",
     manager=True,
 )
@@ -132,7 +132,7 @@ async def _(event):
     await ult.eor(data)
 
 
-@ultroid_cmd(pattern="bots( (.*)|$)", groups_only=True, manager=True)
+@erubot_cmd(pattern="bots( (.*)|$)", groups_only=True, manager=True)
 async def _(ult):
     mentions = "• **Bots in this Chat**: \n"
     if input_str := ult.pattern_match.group(1).strip():
@@ -157,7 +157,7 @@ async def _(ult):
     await ult.eor(mentions)
 
 
-@ultroid_cmd(
+@erubot_cmd(
     pattern="hl( (.*)|$)",
 )
 async def _(ult):
@@ -174,7 +174,7 @@ async def _(ult):
     await ult.eor(f"[{text}]({input_})", link_preview=False)
 
 
-@ultroid_cmd(
+@erubot_cmd(
     pattern="circle$",
 )
 async def _(e):
@@ -254,7 +254,7 @@ FilesEMOJI = {
 }
 
 
-@ultroid_cmd(
+@erubot_cmd(
     pattern="ls( (.*)|$)",
 )
 async def _(e):
@@ -338,7 +338,7 @@ async def _(e):
         await e.delete()
 
 
-@ultroid_cmd(
+@erubot_cmd(
     pattern="sg( (.*)|$)",
 )
 async def lastname(steal):
@@ -389,7 +389,7 @@ async def lastname(steal):
         await lol.edit("Error: @SangMataInfo_bot is not responding!.")
 
 
-@ultroid_cmd(pattern="webshot( (.*)|$)")
+@erubot_cmd(pattern="webshot( (.*)|$)")
 async def webss(event):
     xx = await event.eor(get_string("com_1"))
     xurl = event.pattern_match.group(1).strip()
@@ -437,7 +437,7 @@ async def webss(event):
     await xx.delete()
 
 
-@ultroid_cmd(pattern="shorturl")
+@erubot_cmd(pattern="shorturl")
 async def magic(event):
     try:
         match = event.text.split(maxsplit=1)[1].strip()
