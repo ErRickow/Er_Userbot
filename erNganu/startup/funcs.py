@@ -157,13 +157,13 @@ async def autobot():
     if udB.get_key("BOT_TOKEN"):
         return
     await eruser_bot.start()
-    LOGS.info("MAKING A TELEGRAM BOT FOR YOU AT @BotFather, Kindly Wait")
+    LOGS.info("SEDANG MEMBUATKAN BOT DI @BotFather, Sabar Dulu")
     who = eruser_bot.me
     name = who.first_name + "'s Bot"
     if who.username:
         username = who.username + "_bot"
     else:
-        username = "ultroid_" + (str(who.id))[5:] + "_bot"
+        username = "ErUser_" + (str(who.id))[5:] + "_bot"
     bf = "@BotFather"
     await eruser_bot(UnblockRequest(bf))
     await eruser_bot.send_message(bf, "/cancel")
@@ -171,9 +171,9 @@ async def autobot():
     await eruser_bot.send_message(bf, "/newbot")
     await asyncio.sleep(1)
     isdone = (await eruser_bot.get_messages(bf, limit=1))[0].text
-    if isdone.startswith("That I cannot do.") or "20 bots" in isdone:
+    if isdone.startswith("Gw gabisa.") or "20 bots" in isdone:
         LOGS.critical(
-            "Please make a Bot from @BotFather and add it's token in BOT_TOKEN, as an env var and restart me."
+            "Tolong buat bot sendiri di @BotFather dan copy token bot sebagai vars BOT_TOKEN, dan restart."
         )
         import sys
 
@@ -181,13 +181,13 @@ async def autobot():
     await eruser_bot.send_message(bf, name)
     await asyncio.sleep(1)
     isdone = (await eruser_bot.get_messages(bf, limit=1))[0].text
-    if not isdone.startswith("Good."):
-        await eruser_bot.send_message(bf, "My Assistant Bot")
+    if not isdone.startswith("Bagus sayang."):
+        await eruser_bot.send_message(bf, "Asisstent Er Bot")
         await asyncio.sleep(1)
         isdone = (await eruser_bot.get_messages(bf, limit=1))[0].text
-        if not isdone.startswith("Good."):
+        if not isdone.startswith("Bagus sayang."):
             LOGS.critical(
-                "Please make a Bot from @BotFather and add it's token in BOT_TOKEN, as an env var and restart me."
+                "Tolong buat bot sendiri di @BotFather dan copy token bot sebagai vars BOT_TOKEN, dan restart."
             )
             import sys
 
@@ -196,22 +196,22 @@ async def autobot():
     await asyncio.sleep(1)
     isdone = (await eruser_bot.get_messages(bf, limit=1))[0].text
     await eruser_bot.send_read_acknowledge("botfather")
-    if isdone.startswith("Sorry,"):
+    if isdone.startswith("maaf,"):
         ran = randint(1, 100)
-        username = "ultroid_" + (str(who.id))[6:] + str(ran) + "_bot"
+        username = "eruser_" + (str(who.id))[6:] + str(ran) + "_bot"
         await eruser_bot.send_message(bf, username)
         await asyncio.sleep(1)
         isdone = (await eruser_bot.get_messages(bf, limit=1))[0].text
-    if isdone.startswith("Done!"):
+    if isdone.startswith("Sukses Sayangku ahhhhh!"):
         token = isdone.split("`")[1]
         udB.set_key("BOT_TOKEN", token)
         await enable_inline(eruser_bot, username)
         LOGS.info(
-            f"Done. Successfully created @{username} to be used as your assistant bot!"
+            f"Sukses membuat @{username} untuk digunakan sebagai Assistant Bot!"
         )
     else:
         LOGS.info(
-            "Please Delete Some Of your Telegram bots at @Botfather or Set Var BOT_TOKEN with token of a bot"
+            "Silahkan hapus beberapa bot di @BotFather dan copy token bot sebagai vars BOT_TOKEN, dan restart"
         )
 
         import sys
@@ -236,7 +236,7 @@ async def autopilot():
         async def _save(exc):
             udB._cache["LOG_CHANNEL"] = eruser_bot.me.id
             await asst.send_message(
-                eruser_bot.me.id, f"Failed to Create Log Channel due to {exc}.."
+                eruser_bot.me.id, f"Gagal membuat logs channel karena {exc}.."
             )
 
         if eruser_bot._bot:
