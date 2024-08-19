@@ -399,7 +399,7 @@ async def plug(plugin_channels):
     from .utils import load_addons
 
     if eruser_bot._bot:
-        LOGS.info("Plugin Channels can't be used in 'BOTMODE'")
+        LOGS.info("Plugin Channel kga bisa digunakan di 'BOTMODE'")
         return
     if os.path.exists("addons") and not os.path.exists("addons/.git"):
         shutil.rmtree("addons")
@@ -408,7 +408,7 @@ async def plug(plugin_channels):
     if not os.path.exists("addons/__init__.py"):
         with open("addons/__init__.py", "w") as f:
             f.write("from plugins import *\n\nbot = eruser_bot")
-    LOGS.info("• Loading Plugins from Plugin Channel(s) •")
+    LOGS.info("• Loading Plugins dari Plugin Channel(s) •")
     for chat in plugin_channels:
         LOGS.info(f"{'•'*4} {chat}")
         try:
@@ -424,7 +424,7 @@ async def plug(plugin_channels):
                     try:
                         load_addons(plugin)
                     except Exception as e:
-                        LOGS.info(f"Ultroid - PLUGIN_CHANNEL - ERROR - {plugin}")
+                        LOGS.info(f"Er Userbot - PLUGIN_CHANNEL - ERROR - {plugin}")
                         LOGS.exception(e)
                         os.remove(plugin)
         except Exception as er:
@@ -449,7 +449,7 @@ async def fetch_ann():
             if key not in get_:
                 cont = upt[key]
                 if isinstance(cont, dict) and cont.get("lang"):
-                    if cont["lang"] != (udB.get_key("language") or "en"):
+                    if cont["lang"] != (udB.get_key("language") or "id"):
                         continue
                     cont = cont["msg"]
                 if isinstance(cont, str):
@@ -473,11 +473,11 @@ async def ready():
     chat_id = udB.get_key("LOG_CHANNEL")
     spam_sent = None
     if not udB.get_key("INIT_DEPLOY"):  # Detailed Message at Initial Deploy
-        MSG = """🎇 **Thanks for Deploying Ultroid Userbot!**
-• Here, are the Some Basic stuff from, where you can Know, about its Usage."""
+        MSG = """🎇 **Terimakasih Telah Deploy Er Userbot!**
+• Ini Basic stuff tentang cara penggunaan userbotnya."""
         PHOTO = "https://graph.org/file/54a917cc9dbb94733ea5f.jpg"
-        BTTS = Button.inline("• Click to Start •", "initft_2")
-        udB.set_key("INIT_DEPLOY", "Done")
+        BTTS = Button.inline("• Klik disini •", "initft_2")
+        udB.set_key("INIT_DEPLOY", "Selesai")
     else:
         MSG = f"**Ultroid has been deployed!**\n➖➖➖➖➖➖➖➖➖➖\n**UserMode**: {inline_mention(eruser_bot.me)}\n**Assistant**: @{asst.me.username}\n➖➖➖➖➖➖➖➖➖➖\n**Support**: @TeamUltroid\n➖➖➖➖➖➖➖➖➖➖"
         BTTS, PHOTO = None, None
