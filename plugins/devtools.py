@@ -161,7 +161,7 @@ async def _(event):
 
             await xx.delete()
     else:
-        await xx.edit(OUT, link_preview=not yamlf)
+        await xx.reply(OUT, link_preview=not yamlf)
 
 
 pp = pprint  # ignore: pylint
