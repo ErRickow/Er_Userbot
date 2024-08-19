@@ -201,7 +201,7 @@ async def _(event):
     try:
         cmd = event.text.split(maxsplit=1)[1]
     except IndexError:
-        return await event.eor(get_string("devs_2"), time=5)
+        return await event.reply(get_string("devs_2"), time=5)
     xx = None
     mode = ""
     spli = cmd.split()
@@ -210,7 +210,7 @@ async def _(event):
         try:
             cm = cmd.split(maxsplit=1)[1]
         except IndexError:
-            await event.eor("->> Wrong Format <<-")
+            await event.reply("->> Formatnya Salah Anjing <<-")
             cm = None
         return cm
 
@@ -229,7 +229,7 @@ async def _(event):
     if not cmd:
         return
     if not mode == "silent" and not xx:
-        xx = await event.eor(get_string("com_1"))
+        xx = await event.reply(get_string("com_1"))
     if black:
         try:
             cmd = black.format_str(cmd, mode=black.Mode())
