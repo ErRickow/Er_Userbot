@@ -280,7 +280,7 @@ async def _(event):
     if mode == "silent":
         if exc:
             msg = f"<blockquote>• EVAL ERROR<blockquote>\n\n<blockquote>• CHAT: <code>{get_display_name(event.chat)}</code> [<code>{event.chat_id}</code>]</blockquote>"
-            msg += f"\n\n∆ <blockquote>CODE:<blockquote>\n<blockquote><code>{cmd}</code><blockquote>\n\n∆ <blockquote>ERROR:<blockquote>\n<blockquote><code>{exc}</code></blockquote>"
+            msg += f"\n\n<blockquote>∆ CODE:<blockquote>\n<blockquote><code>{cmd}</code><blockquote>\n\n<blockquote>∆ ERROR:<blockquote>\n<blockquote><code>{exc}</code></blockquote>"
             log_chat = udB.get_key("LOG_CHANNEL")
             if len(msg) > 4000:
                 with BytesIO(msg.encode()) as out_file:
