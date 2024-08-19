@@ -68,12 +68,12 @@ def ULTPIC():
     return inline_pic() or choice(ULTROID_IMAGES)
 
 
-#buttons = [
-#    [
-#        Button.url(get_string("bot_3"), "https://github.com/TeamUltroid/Ultroid"),
-       # Button.url(get_string("bot_4"), "t#.me/UltroidSupportChat"),
-   # ]
-#]#
+buttons = [
+    [
+        Button.url(get_string("bot_3"), "https://github.com/TeamUltroid/Ultroid"),
+        Button.url(get_string("bot_4"), "t#.me/UltroidSupportChat"),
+    ]
+]
 
 # Will move to strings
 alive_txt = """
