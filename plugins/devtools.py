@@ -73,8 +73,8 @@ async def _(event):
             cmd = cmd.split(maxsplit=1)[1]
             rayso = True
     except IndexError:
-        return await event.eor(get_string("devs_1"), time=10)
-    xx = await event.eor(get_string("com_1"))
+        return await event.reply(get_string("devs_1"), time=10)
+    xx = await event.reply(get_string("com_1"))
     reply_to_id = event.reply_to_msg_id or event.id
     stdout, stderr = await bash(cmd, run_code=1)
     OUT = f"**☞ BASH\n\n• COMMAND:**\n`{cmd}` \n\n"
@@ -95,7 +95,7 @@ async def _(event):
                 backgroundColor=choice(ATRA_COL),
             )
             if isinstance(li, dict):
-                await xx.edit(
+                await xx.reply(
                     f"Unknown Response from Carbon: `{li}`\n\nstdout`:{stdout}`\nstderr: `{stderr}`"
                 )
                 return
@@ -117,7 +117,7 @@ async def _(event):
                 rayso=True,
             )
             if isinstance(li, dict):
-                await xx.edit(
+                await xx.reply(
                     f"Unknown Response from Carbon: `{li}`\n\nstdout`:{stdout}`\nstderr: `{stderr}`"
                 )
                 return
