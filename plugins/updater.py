@@ -13,9 +13,7 @@ async def _(e):
     m = await updater()
     branch = (Repo.init()).active_branch
     if m:
-        x = await asst.send_file(
-            udB.get_key("LOG_CHANNEL"),
-            ULTPIC(),
+        x = await e.send_file(
             caption="• **Tersedia Update** •",
             force_document=False,
             buttons=Button.inline("Changelogs", data="changes"),
@@ -32,3 +30,14 @@ async def _(e):
             parse_mode="html",
             link_preview=False,
         )
+        
+@callback("updtavail", owner=True)
+async def updava(event):
+    await event.delete()
+    await asst.send_file(
+        udB.get_key("LOG_CHANNEL"),
+        ULTPIC(),
+        caption="• **Update Available** •",
+        force_document=False,
+        buttons=Button.inline("Changelogs", data="changes"),
+    )
