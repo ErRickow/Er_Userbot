@@ -519,7 +519,7 @@ async def WasItRestart(udb):
         data = key.split("_")
         who = asst if data[0] == "bot" else eruser_bot
         await who.edit_message(
-            int(data[1]), int(data[2]), "__Restarted Successfully.__"
+            int(data[1]), int(data[2]), "__Dah Selesai tod.__"
         )
     except Exception as er:
         LOGS.exception(er)
