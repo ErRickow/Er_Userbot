@@ -33,9 +33,7 @@ async def _(e):
         
 @callback("updtavail", owner=True)
 async def updava(event):
-    await event.delete()
-    await asst.send_file(
-        udB.get_key("LOG_CHANNEL"),
+    await event.send_file(
         ULTPIC(),
         caption="• **Update Available** •",
         force_document=False,
