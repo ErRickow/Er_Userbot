@@ -13,17 +13,17 @@ __doc__ = get_help("help_core")
 
 import os
 
-from pyUltroid.startup.loader import load_addons
+from erNganu.startup.loader import load_addons
 
-from . import LOGS, async_searcher, eod, get_string, safeinstall, ultroid_cmd, un_plug
+from . import LOGS, async_searcher, eod, get_string, safeinstall, erubot_cmd, un_plug
 
 
-@ultroid_cmd(pattern="install", fullsudo=True)
+@erubot_cmd(pattern="install", fullsudo=True)
 async def install(event):
     await safeinstall(event)
 
 
-@ultroid_cmd(
+@erubot_cmd(
     pattern=r"unload( (.*)|$)",
 )
 async def unload(event):
@@ -36,7 +36,7 @@ async def unload(event):
     if zym in lsd:
         try:
             un_plug(shortname)
-            await event.eor(f"**Uɴʟᴏᴀᴅᴇᴅ** `{shortname}` **Sᴜᴄᴄᴇssғᴜʟʟʏ.**", time=3)
+            await event.reply(f"**Uɴʟᴏᴀᴅᴇᴅ** `{shortname}` **Sᴜᴄᴄᴇssғᴜʟʟʏ.**", time=3)
         except Exception as ex:
             LOGS.exception(ex)
             return await event.eor(str(ex))
@@ -46,7 +46,7 @@ async def unload(event):
         await event.eor(f"**Nᴏ Pʟᴜɢɪɴ Nᴀᴍᴇᴅ** `{shortname}`", time=3)
 
 
-@ultroid_cmd(
+@erubot_cmd(
     pattern=r"uninstall( (.*)|$)",
 )
 async def uninstall(event):
@@ -69,7 +69,7 @@ async def uninstall(event):
         return await event.eor(f"**Nᴏ Pʟᴜɢɪɴ Nᴀᴍᴇᴅ** `{shortname}`", time=3)
 
 
-@ultroid_cmd(
+@erubot_cmd(
     pattern=r"load( (.*)|$)",
     fullsudo=True,
 )
@@ -94,7 +94,7 @@ async def load(event):
         )
 
 
-@ultroid_cmd(pattern="getaddons( (.*)|$)", fullsudo=True)
+@erubot_cmd(pattern="getaddons( (.*)|$)", fullsudo=True)
 async def get_the_addons_lol(event):
     thelink = event.pattern_match.group(1).strip()
     xx = await event.eor(get_string("com_1"))
