@@ -68,7 +68,7 @@ from erNganu.fns.tools import metadata, translate
 from . import (
     HNDLR,
     LOGS,
-    ERNganu,
+    ERConfig,
     async_searcher,
     bash,
     check_filename,
