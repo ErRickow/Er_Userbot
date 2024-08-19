@@ -354,7 +354,7 @@ async def customize():
             file, _ = await download_file(file, "profile.jpg")
             rem = True
         msg = await asst.send_message(
-            chat_id, "**Auto Customisation** Started on @Botfather"
+            chat_id, "**Auto Costumisasi** Dimulai di @Botfather"
         )
         await asyncio.sleep(1)
         await eruser_bot.send_message("botfather", "/cancel")
