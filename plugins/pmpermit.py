@@ -42,7 +42,7 @@ import asyncio
 import re
 from os import remove
 
-from pyUltroid.dB import DEVLIST
+from erNganu.dB import DEVLIST
 
 try:
     from tabulate import tabulate
@@ -58,7 +58,7 @@ from telethon.tl.functions.contacts import (
 from telethon.tl.functions.messages import ReportSpamRequest
 from telethon.utils import get_display_name, resolve_bot_file_id
 
-from pyUltroid.dB.base import KeyManager
+from erNganu.dB.base import KeyManager
 
 from . import *
 
