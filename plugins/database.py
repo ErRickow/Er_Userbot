@@ -28,7 +28,7 @@ async def _(tai):
             data = data[1].split(maxsplit=1)
             data[1] = f"{str(udB.get_key(data[0]))} {data[1]}"
         udB.set_key(data[0], data[1])
-        await ult.reply(
+        await tai.reply(
             f"**DB Key Value Pair Updated\nKey :** `{data[0]}`\n**Value :** `{data[1]}`"
         )
 
