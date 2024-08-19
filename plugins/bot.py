@@ -192,7 +192,7 @@ async def nganu(event):
   start = time.time()
     end = round((time.time() - start) * 1000)
     uptime = time_formatter((time.time() - start_time) * 1000)
-    await event.reply("<blockquote>hay juga</blockquote>")
+    await event.reply("<blockquote>hay juga ${uptime}</blockquote>")
 
 @erubot_cmd(
     pattern="cmds$",
