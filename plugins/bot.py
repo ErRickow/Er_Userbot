@@ -330,7 +330,7 @@ async def _(e):
         x = await asst.send_file(
             udB.get_key("LOG_CHANNEL"),
             ULTPIC(),
-            caption="• **Update Available** •",
+            caption="• **Tersedia Update** •",
             force_document=False,
             buttons=Button.inline("Changelogs", data="changes"),
         )
