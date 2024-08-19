@@ -293,7 +293,7 @@ async def _(event):
     tmt = tima * 1000
     timef = time_formatter(tmt)
     timeform = timef if not timef == "0s" else f"{tmt:.3f}ms"
-    final_output = "__►__ **EVAL** (__in {}__)\n```{}``` \n\n __►__ **OUTPUT**: \n```{}``` \n".format(
+    final_output = "<blockquote>__►__ **EVAL** (__in {}__)<blockquote>\n<blockquote>```{}```<blockquote>\n\n <blockquote>__►__ **OUTPUT**: <blockquote>\n<blockquote```{}``` <blockquote>\n</blockquote>".format(
         timeform,
         cmd,
         evaluation,
