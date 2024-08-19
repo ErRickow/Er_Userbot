@@ -308,7 +308,7 @@ async def _(event):
                 force_document=True,
                 thumb=ERConfig.thumb,
                 allow_cache=False,
-                caption=f"```{cmd}```" if len(cmd) < 998 else None,
+                caption=f"<blockquote>{cmd}</blockquote>" if len(cmd) < 998 else None,
                 reply_to=reply_to_id,
             )
         return await xx.delete()
