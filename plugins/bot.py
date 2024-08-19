@@ -341,7 +341,7 @@ async def _(e):
             link_preview=False,
         )
     else:
-        await xx.reply(
+        await xx.edit(
             f'<blockquote><code>Your BOT is </code><strong>up-to-date</strong><code> with </code><strong>nganu</a></strong></blockquote>',
             parse_mode="html",
             link_preview=False,
