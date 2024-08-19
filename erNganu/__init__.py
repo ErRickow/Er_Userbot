@@ -8,7 +8,7 @@ run_as_module = __package__ in sys.argv or sys.argv[0] == "-m"
 
 class ERConfig:
     lang = "id"
-    thumb = "bahan/extras/er_userbot.jpg"
+    thumb = "bahan/extra/er_userbot.jpg"
 
 
 if run_as_module:
