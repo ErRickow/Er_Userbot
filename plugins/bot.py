@@ -190,7 +190,7 @@ async def _(event):
 @erubot_cmd(pattern="p$", chats=[], type=["official", "assistant"])
 async def nganu(event):
   start = time.time()
-    end = round((time.time() - start) * 100000)
+    end = round((time.time() - start) * 1000)
     uptime = time_formatter((time.time() - start_time) * 1000)
     await event.reply("<blockquote>hay juga</blockquote>")
 
