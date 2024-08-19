@@ -46,7 +46,7 @@ fn = functions
     pattern="sysinfo$",
 )
 async def _(e):
-    xx = await e.eor(get_string("com_1"))
+    xx = await e.reply(get_string("com_1"))
     x, y = await bash("neofetch|sed 's/\x1B\\[[0-9;\\?]*[a-zA-Z]//g' >> neo.txt")
     if y and y.endswith("NOT_FOUND"):
         return await xx.edit(f"Error: `{y}`")
