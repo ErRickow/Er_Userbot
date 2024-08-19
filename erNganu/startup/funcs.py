@@ -145,7 +145,7 @@ async def startup_stuff():
             LOGS.debug(er)
         except BaseException:
             LOGS.critical(
-                "Incorrect Timezone ,\nCheck Available Timezone From Here https://graph.org/Ultroid-06-18-2\nSo Time is Default UTC"
+                "Format TimeZone Salah,\nBegini contohnya: Asia/Magelang\nWaktu Default UTC"
             )
             os.environ["TZ"] = "UTC"
             time.tzset()
