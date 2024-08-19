@@ -345,9 +345,9 @@ async def customize():
             sir = f"@{eruser_bot.me.username}"
         file = random.choice(
             [
-                "https://telegra.ph/file/15771c9453e29afcdaf70.jpg",
-                "https://graph.org/file/a97973ee0425b523cdc28.jpg",
-                "bahan/extras/ultroid_assistant.jpg",
+                "https://telegra.ph/file/f35111938459684c20dfe.jpg",
+                "https://telegra.ph/file/0ba5447759e13546a3122.jpg",
+                "bahan/extras/erassistant.jpg",
             ]
         )
         if not os.path.exists(file):
