@@ -312,7 +312,7 @@ async def _(event):
                 reply_to=reply_to_id,
             )
         return await xx.delete()
-    await xx.edit(final_output)
+    await xx.reply(final_output)
 
 
 def _stringify(text=None, *args, **kwargs):
