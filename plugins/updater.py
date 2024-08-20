@@ -1,4 +1,63 @@
 ##kurang lebih gini:
+from . import get_help
+
+__doc__ = get_help("help_bot")
+from .. import run_as_module
+
+if run_as_module:
+    from ..configs import Var
+
+
+try:
+    from aiohttp import ClientSession as aiohttp_client
+except ImportError:
+    aiohttp_client = None
+    try:
+        import requests
+    except ImportError:
+        requests = None
+
+try:
+    import heroku3
+except ImportError:
+    heroku3 = None
+
+try:
+    from git import Repo
+    from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
+except ImportError:
+    Repo = None
+
+from . import (
+    ATRA_COL,
+    LOGS,
+    OWNER_NAME,
+    ULTROID_IMAGES,
+    Button,
+    Carbon,
+    Telegraph,
+    Var,
+    allcmds,
+    asst,
+    bash,
+    call_back,
+    callback,
+    def_logs,
+    eor,
+    get_string,
+    heroku_logs,
+    in_pattern,
+    inline_pic,
+    restart,
+    shutdown,
+    start_time,
+    time_formatter,
+    udB,
+    erubot_cmd,
+    eruserbot_version,
+    updater,
+)
+
 
 @erubot_cmd(pattern="up( (.*)|$)")
 async def ngapdate(client, message):
