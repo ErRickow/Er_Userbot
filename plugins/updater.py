@@ -55,3 +55,20 @@ from . import (
     eruserbot_version,
     updater,
 )
+
+@erubot_cmd(
+    pattern="up$",
+    fullsudo=True,
+)
+async def restartbt(ult):
+    xx = await e.reply(get_string("upd_1"))
+    if e.pattern_match.group(1).strip() and (
+        "fast" in e.pattern_match.group(1).strip()
+        or "soft" in e.pattern_match.group(1).strip()
+    ):
+      #  return await restart(ok)
+    await bash("git pull && pip3 install -r requirements.txt")
+    if len(sys.argv) > 1:
+        os.execl(sys.executable, sys.executable, "main.py")
+    else:
+        os.execl(sys.executable, sys.executable, "-m", "erNganu")
