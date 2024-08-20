@@ -90,7 +90,7 @@ async def _(ult):
         return await ult.eor(get_string("sudo_1"), time=5)
     name = inline_mention(name) if name else f"`{id}`"
     if id not in sudoers():
-        mmm = f"{name} `wasn't a SUDO User ...`"
+        mmm = f"{name} `BUKAN` SUDO User TOLOL ...`"
     else:
         key = sudoers()
         key.remove(id)
