@@ -41,12 +41,12 @@ async def _(a):
         "fast" in a.pattern_match.group(1).strip()
         or "soft" in a.pattern_match.group(1).strip()
     ):
-    emo = a.me.id()
         await xx.reply(
             f'<blockquote><code>Your BOT is </code><strong>up-to-date</strong><code> with </code><strong>nganu</a></strong></blockquote>',
             parse_mode="html",
             link_preview=False,
         )
+    emo = a.me.id()
     out = subprocess.check_output(["git", "pull"]).decode("UTF-8")
     teks = f"<b>❒ Status resources {asst.me.mention}:</b>\n"
     memeg = f"<b>Change logs {asst.me.mention}</b>"
