@@ -36,7 +36,7 @@ from . import (
 
 @erubot_cmd(pattern="up( (.*)|$)")
 async def ngapdate(client):
-    emo = client.me.id()
+    emo = client.me.username()
     await emo.initialize()
     pros = await client.reply(
         f"<blockquote>{emo.proses} <b>Memeriksa pembaruan resources {bot.me.mention} ..</b></blockquote>"
