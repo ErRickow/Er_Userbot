@@ -60,14 +60,14 @@ async def _(a)
             file.write(out)
 
         X = f"<blockquote><b>Change logs {asst.me.mention}</b></blockquote>"
-        await client.send_document(
+        await e.send_document(
             message.chat.id,
-            "output.txt",
+            "logs.txt",
             caption=f"{X}",
             reply_to_message_id=message.id,
         )
         await anuk.delete()
-        os.remove("output.txt")
+        os.remove("logs.txt")
     else:
         format_line = [f"┣ {line}" for line in out.splitlines()]
         if format_line:
