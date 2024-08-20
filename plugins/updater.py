@@ -68,6 +68,19 @@ async def restartbt(ult):
     ):
       #  return await restart(ok)
     await bash("git pull && pip3 install -r requirements.txt")
+    call_back()
+    if len
+                ftext += "\n\n\n**Last 5 commits:**`\n"
+
+                stdout, stderr = await bash('git log --pretty=format:"%an: %s" -5')
+                result = stdout + (stderr or "")
+
+                ftext += f"{result}`"
+
+                if len(ftext) > 4096:
+                    with BytesIO(ftext.encode()) as file:
+                        file.name = "logs.txt"
+    
     if len(sys.argv) > 1:
         os.execl(sys.executable, sys.executable, "main.py")
     else:
