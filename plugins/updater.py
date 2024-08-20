@@ -48,15 +48,15 @@ async def _(a)
             link_preview=False,
         )
     out = subprocess.check_output(["git", "pull"]).decode("UTF-8")
-    teks = f"<b>❒ Status resources {bot.me.mention}:</b>\n"
-    memeg = f"<b>Change logs {bot.me.mention}</b>"
+    teks = f"<b>❒ Status resources {asst.me.mention}:</b>\n"
+    memeg = f"<b>Change logs {asst.me.mention}</b>"
     if "Already up to date." in str(out):
         return await pros.edit(f"<blockquote>{teks}┖ {out}</blockquote>")
     elif len(out) > 4096:
         anuk = await pros.edit(
             f"<blockquote>{emo.proses} <b>Hasil akan dikirimkan dalam bentuk file ..</b></blockquote>"
         )
-        with open("output.txt", "w+") as file:
+        with open("logs.txt", "w+") as file:
             file.write(out)
 
         X = f"<blockquote>{emo.alive} <b>Change logs {bot.me.mention}</b></blockquote>"
