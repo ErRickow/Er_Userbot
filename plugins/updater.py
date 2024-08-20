@@ -70,34 +70,10 @@ async def _(e):
         await xx.edit(get_string("upd_7"))
         os.execl(sys.executable, "python3", "-m", "erNganu")
         # return
-    m = await updater()
-    branch = (Repo.init()).active_branch
-    if m:
-      with BytesIO(str.encode(final_output)) as out_file:
-            out_file.name = "tldr_log.txt"
-        x = await e.client.send_file(
-            caption="• **Tersedia Update** •",
-            force_document=True,
-            buttons=Button.inline("Changelogs", data="changes"),
-        )
-        Link = x.message_link
-        await xx.edit(
-            f'<strong><a href="{Link}">[ChangeLogs]</a></strong>',
-            parse_mode="html",
-            link_preview=False,
-        )
+
     else:
         await xx.edit(
             f'<blockquote><code>Your BOT is </code><strong>up-to-date</strong><code> with </code><strong>nganu</a></strong></blockquote>',
             parse_mode="html",
             link_preview=False,
         )
-        
-@callback("updtavail", owner=True)
-async def updava(event):
-    await event.send_file(
-        ULTPIC(),
-        caption="• **Update Available** •",
-        force_document=False,
-        buttons=Button.inline("Changelogs", data="changes"),
-    )
