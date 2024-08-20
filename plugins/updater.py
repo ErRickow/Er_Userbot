@@ -49,7 +49,7 @@ async def _(a)
         )
     out = subprocess.check_output(["git", "pull"]).decode("UTF-8")
     teks = f"<b>❒ Status resources {bot.me.mention}:</b>\n"
-    memeg = f"{emo.profil} <b>Change logs {bot.me.mention}</b>"
+    memeg = f"<b>Change logs {bot.me.mention}</b>"
     if "Already up to date." in str(out):
         return await pros.edit(f"<blockquote>{teks}┖ {out}</blockquote>")
     elif len(out) > 4096:
