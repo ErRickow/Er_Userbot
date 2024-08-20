@@ -3,30 +3,6 @@ from . import get_help
 
 __doc__ = get_help("help_updater")
 
-if run_as_module:
-    from ..configs import Var
-
-
-try:
-    from aiohttp import ClientSession as aiohttp_client
-except ImportError:
-    aiohttp_client = None
-    try:
-        import requests
-    except ImportError:
-        requests = None
-
-try:
-    import heroku3
-except ImportError:
-    heroku3 = None
-
-try:
-    from git import Repo
-    from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
-except ImportError:
-    Repo = None
-
 from . import (
     ATRA_COL,
     LOGS,
