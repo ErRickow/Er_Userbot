@@ -61,7 +61,7 @@ async def _(ult):
         key.append(id)
         udB.set_key("SUDOS", key)
         mmm = f"**Menambahkan** {name} **sebagai SUDO User**"
-    await ult.reply(mmm, time=5)
+    await ult.eor(mmm, time=5)
 
 
 @erubot_cmd(pattern="delsudo( (.*)|$)", fullsudo=True)
@@ -96,7 +96,7 @@ async def _(ult):
         key.remove(id)
         udB.set_key("SUDOS", key)
         mmm = f"**Di Hilangkan** {name} **Dari SUDO User(s)**"
-    await ult.reply(mmm, time=5)
+    await ult.eor(mmm, time=5)
 
 
 @erubot_cmd(
@@ -119,6 +119,6 @@ async def _(ult):
     m = udB.get_key("SUDO") or True
     if not m:
         m = "[False](https://graph.org/Ultroid-04-06)"
-    return await ult.reply(
+    return await ult.eod(
         f"**SUDO MODE : {m}\n\nList of SUDO Users :**\n{msg}", link_preview=False
     )
