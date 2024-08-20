@@ -66,7 +66,7 @@ async def restartbt(ult):
         "fast" in e.pattern_match.group(1).strip()
         or "soft" in e.pattern_match.group(1).strip()
     ):
-      #  return await restart(ok)
+        return await restart(ok)
     await bash("git pull && pip3 install -r requirements.txt")
     call_back()
                 ftext += "\n\n\n**Last 5 commits:**`\n"
