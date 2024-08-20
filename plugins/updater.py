@@ -36,7 +36,7 @@ from . import (
 
 @erubot_cmd(pattern="up( (.*)|$)")
 async def _(a):
-    xx = await e.reply(get_string("upd_1"))
+    xx = await a.reply(get_string("upd_1"))
     if a.pattern_match.group(1).strip() and (
         "fast" in a.pattern_match.group(1).strip()
         or "soft" in a.pattern_match.group(1).strip()
