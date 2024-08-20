@@ -1,4 +1,6 @@
 ##kurang lebih gini:
+import subprocess
+
 from . import get_help
 
 __doc__ = get_help("help_updater")
