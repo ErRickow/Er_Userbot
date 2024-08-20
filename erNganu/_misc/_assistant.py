@@ -77,7 +77,7 @@ def callback(data=None, from_users=[], admins=False, owner=False, **kwargs):
             if admins and not await admin_check(event):
                 return
             if from_users and event.sender_id not in from_users:
-                return await event.answer("Not for You!", alert=True)
+                return await event.answer("Bukan untuk Lo!", alert=True)
             if owner and event.sender_id not in owner_and_sudos():
                 return await event.answer(f"Ini adalah {OWNER}'s bot!!")
             try:
