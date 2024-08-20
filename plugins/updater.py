@@ -35,12 +35,18 @@ from . import (
 
 
 @erubot_cmd(pattern="up( (.*)|$)")
-async def ngapdate(client):
-    emo = client.me.username()
-    await emo.initialize()
-    pros = await client.reply(
-        f"<blockquote>{emo.proses} <b>Memeriksa pembaruan resources {bot.me.mention} ..</b></blockquote>"
-    )
+async def _(a)
+    xx = await e.reply(get_string("upd_1"))
+    if a.pattern_match.group(1).strip() and (
+        "fast" in a.pattern_match.group(1).strip()
+        or "soft" in a.pattern_match.group(1).strip()
+    ):
+    emo = a.me.id()
+        await xx.reply(
+            f'<blockquote><code>Your BOT is </code><strong>up-to-date</strong><code> with </code><strong>nganu</a></strong></blockquote>',
+            parse_mode="html",
+            link_preview=False,
+        )
     out = subprocess.check_output(["git", "pull"]).decode("UTF-8")
     teks = f"<b>❒ Status resources {bot.me.mention}:</b>\n"
     memeg = f"{emo.profil} <b>Change logs {bot.me.mention}</b>"
