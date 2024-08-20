@@ -34,5 +34,5 @@ async def ngapdate(client, message):
             format_line[-1] = f"┖ {format_line[-1][2:]}"
         format_output = "\n".join(format_line)
 
-        await pros.edit(f"<blockquote>{memeg}\n\n{teks}{format_output}</blockquote>")
+        await pros.edit(f"<blockquote>{memeg}\n\n{teks}{format_output}</blockquote>", parse_mode="html")
     os.execl(sys.executable, sys.executable, "-m", "erNganu")
