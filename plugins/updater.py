@@ -73,6 +73,8 @@ async def _(e):
     m = await updater()
     branch = (Repo.init()).active_branch
     if m:
+      with BytesIO(str.encode(final_output)) as out_file:
+            out_file.name = "tldr_log.txt"
         x = await e.client.send_file(
             caption="• **Tersedia Update** •",
             force_document=True,
