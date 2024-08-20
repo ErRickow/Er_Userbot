@@ -54,7 +54,7 @@ async def _(ult):
     if id == eruser_bot.uid:
         mmm = get_string("sudo_2")
     elif id in sudoers():
-        mmm = f"{name} `Sudah sebagai SUDO User ...`"
+        mmm = f"{name} `Sudah menjadi SUDO User ...`"
     else:
         udB.set_key("SUDO", "True")
         key = sudoers()
