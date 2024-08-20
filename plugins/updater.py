@@ -3,8 +3,6 @@ from . import get_help
 
 __doc__ = get_help("help_updater")
 
-from .. import run_as_module
-
 if run_as_module:
     from ..configs import Var
 
