@@ -95,8 +95,8 @@ async def _(ult):
         key = sudoers()
         key.remove(id)
         udB.set_key("SUDOS", key)
-        mmm = f"**Removed** {name} **from SUDO User(s)**"
-    await ult.eor(mmm, time=5)
+        mmm = f"**Di Hilangkan** {name} **Dari SUDO User(s)**"
+    await ult.reply(mmm, time=5)
 
 
 @erubot_cmd(
@@ -115,10 +115,10 @@ async def _(ult):
         if name:
             msg += f"• {inline_mention(name)} ( `{i}` )\n"
         else:
-            msg += f"• `{i}` -> Invalid User\n"
+            msg += f"• `{i}` -> TOLOL GOBLOK\n"
     m = udB.get_key("SUDO") or True
     if not m:
         m = "[False](https://graph.org/Ultroid-04-06)"
-    return await ult.eor(
+    return await ult.reply(
         f"**SUDO MODE : {m}\n\nList of SUDO Users :**\n{msg}", link_preview=False
     )
