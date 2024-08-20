@@ -54,14 +54,14 @@ async def _(ult):
     if id == eruser_bot.uid:
         mmm = get_string("sudo_2")
     elif id in sudoers():
-        mmm = f"{name} `is already a SUDO User ...`"
+        mmm = f"{name} `Sudah sebagai SUDO User ...`"
     else:
         udB.set_key("SUDO", "True")
         key = sudoers()
         key.append(id)
         udB.set_key("SUDOS", key)
-        mmm = f"**Added** {name} **as SUDO User**"
-    await ult.eor(mmm, time=5)
+        mmm = f"**Menambahkan** {name} **sebagai SUDO User**"
+    await ult.reply(mmm, time=5)
 
 
 @erubot_cmd(pattern="delsudo( (.*)|$)", fullsudo=True)
