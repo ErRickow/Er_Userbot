@@ -46,7 +46,6 @@ async def _(a):
             parse_mode="html",
             link_preview=False,
         )
-    emo = a.client.me.id()
     out = subprocess.check_output(["git", "pull"]).decode("UTF-8")
     teks = f"<b>❒ Status resources {asst.me.mention}:</b>\n"
     memeg = f"<b>Change logs {asst.me.mention}</b>"
