@@ -66,7 +66,7 @@ from . import (
     eor,
     get_string,
     inline_mention,
-    ultroid_bot,
+    eruser_bot,
     ultroid_cmd,
 )
 from ._inline import something
@@ -95,7 +95,7 @@ keym = KeyManager("GBLACKLISTS", cast=list)
 @ultroid_cmd(pattern="gpromote( (.*)|$)", fullsudo=True)
 async def _(e):
     x = e.pattern_match.group(1).strip()
-    ultroid_bot = e.client
+    eruser_bot = e.client
     if not x:
         return await e.eor(get_string("schdl_2"), time=5)
     user = await e.get_reply_message()
@@ -186,7 +186,7 @@ async def _(e):
                 and (x.is_group or x.is_channel)
             ):
                 try:
-                    await ultroid_bot(
+                    await eruser_bot(
                         EditAdminRequest(
                             x.id,
                             user,
@@ -203,7 +203,7 @@ async def _(e):
 @ultroid_cmd(pattern="gdemote( (.*)|$)", fullsudo=True)
 async def _(e):
     x = e.pattern_match.group(1).strip()
-    ultroid_bot = e.client
+    eruser_bot = e.client
     if not x:
         return await e.eor(get_string("schdl_2"), time=5)
     user = await e.get_reply_message()
@@ -228,7 +228,7 @@ async def _(e):
                 and (x.is_group or x.is_channel)
             ):
                 try:
-                    await ultroid_bot(
+                    await eruser_bot(
                         EditAdminRequest(
                             x.id,
                             user.id,
@@ -250,7 +250,7 @@ async def _(e):
         if user.isdigit():
             user = int(user)
         try:
-            name = await ultroid_bot.get_entity(user)
+            name = await eruser_bot.get_entity(user)
         except BaseException:
             return await e.eor(f"`No User Found Regarding {user}`", time=5)
         ev = await e.eor(f"`Demoting {name.first_name} globally.`")
@@ -259,7 +259,7 @@ async def _(e):
             key = k[2]
         rank = "Not AdMin"
         c = 0
-        async for x in ultroid_bot.iter_dialogs():
+        async for x in eruser_bot.iter_dialogs():
             if (
                 "group" in key.lower()
                 and x.is_group
@@ -271,7 +271,7 @@ async def _(e):
                 and (x.is_group or x.is_channel)
             ):
                 try:
-                    await ultroid_bot(
+                    await eruser_bot(
                         EditAdminRequest(
                             x.id,
                             user,
@@ -385,7 +385,7 @@ async def _(e):
         userid = int(userid)
         name = str(userid)
     chats = 0
-    if userid == ultroid_bot.uid:
+    if userid == eruser_bot.uid:
         return await xx.eor("`I can't gban myself.`", time=3)
     elif userid in DEVLIST:
         return await xx.eor("`I can't gban my Developers.`", time=3)
@@ -578,7 +578,7 @@ async def gkick(e):
         return await xx.edit("`Reply to some msg or add their id.`", time=5)
     name = (await e.client.get_entity(userid)).first_name
     chats = 0
-    if userid == ultroid_bot.uid:
+    if userid == eruser_bot.uid:
         return await xx.eor("`I can't gkick myself.`", time=3)
     if userid in DEVLIST:
         return await xx.eor("`I can't gkick my Developers.`", time=3)
@@ -610,7 +610,7 @@ async def _(e):
         return await xx.eor("`Reply to some msg or add their id.`", tome=5, time=5)
     name = await e.client.get_entity(userid)
     chats = 0
-    if userid == ultroid_bot.uid:
+    if userid == eruser_bot.uid:
         return await xx.eor("`I can't gmute myself.`", time=3)
     if userid in DEVLIST:
         return await xx.eor("`I can't gmute my Developers.`", time=3)
@@ -691,7 +691,7 @@ async def list_gengbanned(event):
             )
         await x.reply(
             file="gbanned.txt",
-            message=f"List of users GBanned by {inline_mention(ultroid_bot.me)}",
+            message=f"List of users GBanned by {inline_mention(eruser_bot.me)}",
         )
         os.remove("gbanned.txt")
         await x.delete()
