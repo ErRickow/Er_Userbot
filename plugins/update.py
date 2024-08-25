@@ -63,7 +63,7 @@ async def _(e):
         out = subprocess.check_output(["git", "pull"]).decode("UTF-8")
         teks = f"<b>❒ Status resources :</b>\n"
         memeg = f"<b>Perubahan logs </b>"
-elif len(out) > 4096:
+if len(out) > 4096:
           anuk = await pros.edit(
             f"<blockquote> <b>Hasil akan dikirimkan dalam bentuk file ..</b></blockquote>"
         )
