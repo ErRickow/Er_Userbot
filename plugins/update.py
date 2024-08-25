@@ -1,3 +1,7 @@
+from . import get_help
+
+__doc__ = get_help("help_updater")
+
 import re
 import asyncio
 import os
@@ -5,6 +9,11 @@ import sys
 import shutil
 import subprocess
 
+try:
+    from git import Repo
+except ImportError:
+    LOGS.error("bot: 'gitpython' module not found!")
+    Repo = None
 
 from . import (
     ATRA_COL,
