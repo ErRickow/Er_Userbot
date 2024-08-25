@@ -64,7 +64,7 @@ async def _(e):
         teks = f"<b>❒ Status resources :</b>\n"
         memeg = f"<b>Perubahan logs </b>"
         if len(out) > 4096:
-          anuk = await pros.edit(
+          anuk = await xx.edit(
             f"<blockquote> <b>Hasil akan dikirimkan dalam bentuk file ..</b></blockquote>"
         )
         with open("output.txt", "w+") as file: 
@@ -76,7 +76,7 @@ async def _(e):
             
             format_line[-1] = f"┖ {format_line[-1][2:]}"
             format_output = "\n".join(format_line)
-            pros.edit(f"<blockquote>{memeg}\n\n{teks}{format_output}</blockquote>")
+            xx.edit(f"<blockquote>{memeg}\n\n{teks}{format_output}</blockquote>")
             os.execl(sys.executable, sys.executable, "python3", "-m", "erNganu")
   
 @callback("updtavail", owner=True)
