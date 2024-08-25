@@ -37,7 +37,7 @@ def load_addons(plugin_name):
     from .. import HNDLR, LOGS, asst, udB, eruser_bot
     from .._misc import _supporter as config
     from .._misc._assistant import asst_cmd, callback, in_pattern
-    from .._misc._decorators import eruser_cmd
+    from .._misc._decorators import erubot_cmd
     from .._misc._supporter import Config, admin_cmd, sudo_cmd
     from .._misc._wrappers import eod, eor
     from ..configs import Var
@@ -74,8 +74,8 @@ def load_addons(plugin_name):
     mod.eor = eor
     mod.edit_or_reply = eor
     mod.asst_cmd = asst_cmd
-    mod.eruser_cmd = eruser_cmd
-    mod.on_cmd = eruser_cmd
+    mod.erubot_cmd = erubot_cmd
+    mod.on_cmd = erubot_cmd
     mod.callback = callback
     mod.Redis = udB.get_key
     mod.admin_cmd = admin_cmd
