@@ -26,7 +26,7 @@ async def chatgpt2(e):
     payloads = {"query": query}
     try:
         response = await async_searcher(
-            "https://randydev-ryuzaki-api.hf.space/ryuzaki/chatgpt-old",
+            "https://randydev-ryuzaki-api.hf.space/api/v1/akeno/mistralai",
             post=True,
             json=payloads,
             re_json=True,
