@@ -70,7 +70,7 @@ async def _(e):
         with open("output.txt", "w+") as file: 
           file.write(out)
 
-os.remove("output.txt")
+#os.remove("output.txt")
 format_line = [f"┣ {line}" for line in out.splitlines()]
 if format_line:
   format_line[-1] = f"┖ {format_line[-1][2:]}"
