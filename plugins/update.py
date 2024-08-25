@@ -67,7 +67,8 @@ async def _(e):
           anuk = await pros.edit(
             f"<blockquote> <b>Hasil akan dikirimkan dalam bentuk file ..</b></blockquote>"
         )
-        with open("output.txt", "w+") as file: file.write(out)
+        with open("output.txt", "w+") as file: 
+          file.write(out)
 
 os.remove("output.txt")
   format_line = [f"┣ {line}" for line in out.splitlines()]
