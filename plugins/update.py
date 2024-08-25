@@ -67,7 +67,7 @@ if len(out) > 4096:
           anuk = await pros.edit(
             f"<blockquote> <b>Hasil akan dikirimkan dalam bentuk file ..</b></blockquote>"
         )
-  with open("output.txt", "w+") as file:
+        with open("output.txt", "w+") as file:
             file.write(out)
 
 os.remove("output.txt")
