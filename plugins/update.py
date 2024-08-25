@@ -60,9 +60,9 @@ async def _(e):
         await xx.edit(get_string("upd_7"))
         os.execl(sys.executable, "python3", "-m", "erNganu")
         # return
-  out = subprocess.check_output(["git", "pull"]).decode("UTF-8")
-  teks = f"<b>❒ Status resources :</b>\n"
-  memeg = f"<b>Perubahan logs </b>"
+        out = subprocess.check_output(["git", "pull"]).decode("UTF-8")
+        teks = f"<b>❒ Status resources :</b>\n"
+        memeg = f"<b>Perubahan logs </b>"
 elif len(out) > 4096:
           anuk = await pros.edit(
             f"<blockquote> <b>Hasil akan dikirimkan dalam bentuk file ..</b></blockquote>"
