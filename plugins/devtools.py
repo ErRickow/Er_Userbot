@@ -294,8 +294,6 @@ async def _(event):
     timef = time_formatter(tmt)
     timeform = timef if not timef == "0s" else f"{tmt:.3f}ms"
     final_output = "<b> OUTPUT</b>: \n```{} \n```".format(
-        timeform,
-        cmd,
         evaluation,
     )
     if len(final_output) > 4096:
