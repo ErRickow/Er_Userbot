@@ -76,7 +76,7 @@ if format_line:
   format_line[-1] = f"┖ {format_line[-1][2:]}"
   format_output = "\n".join(format_line)
 await pros.edit(f"<blockquote>{memeg}\n\n{teks}{format_output}</blockquote>")
-  os.execl(sys.executable, sys.executable, "python3", "-m", "erNganu")
+os.execl(sys.executable, sys.executable, "python3", "-m", "erNganu")
   
 @callback("updtavail", owner=True)
 async def updava(event):
