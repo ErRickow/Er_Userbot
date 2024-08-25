@@ -51,14 +51,14 @@ def check_command(command):
 @erubot_cmd(pattern="up( (.*)|$)")
 async def _(e):
     xx = await e.reply(get_string("upd_1"))
-    if e.pattern_match.group(1).strip() and (
-        "fast" in e.pattern_match.group(1).strip()
-        or "soft" in e.pattern_match.group(1).strip()
-    ):
-        await bash("git pull -f && pip3 install -r requirements.txt")
-        call_back()
-        await xx.edit(get_string("upd_7"))
-        os.execl(sys.executable, "python3", "-m", "erNganu")
+   # if e.pattern_match.group(1).strip() and (
+     #   "fast" in e.pattern_match.group(1).strip()
+    #    or "soft" in e.pattern_match.group(1).strip()
+   # ):
+        #await bash("git pull -f && pip3 install -r requirements.txt")
+        #call_back()
+        #await xx.edit(get_string("upd_7"))
+        #os.execl(sys.executable, "python3", "-m", "erNganu")
         # return
         out = subprocess.check_output(["git", "pull"]).decode("UTF-8")
         teks = f"<b>❒ Status resources :</b>\n"
