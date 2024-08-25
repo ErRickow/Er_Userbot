@@ -5,7 +5,7 @@
 # PLease read the GNU Affero General Public License in
 # <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 """
-✘ Commands Available -
+✘ Bantuan Global Tools -
 
 • `{i}gban <reply user/ username>`
 • `{i}ungban`
@@ -727,14 +727,14 @@ async def gstat_(e):
     await xx.edit(msg)
 
 
-@ultroid_cmd(pattern="gblacklist$")
+@ultroid_cmd(pattern="gbl$")
 async def blacklist_(event):
-    await gblacker(event, "add")
+    await gblacker(event, "ᴅɪᴍᴀꜱᴜᴋᴋᴀɴ")
 
 
-@ultroid_cmd(pattern="ungblacklist$")
+@ultroid_cmd(pattern="unbl$")
 async def ungblacker(event):
-    await gblacker(event, "remove")
+    await gblacker(event, "ʙᴇʙᴀꜱ")
 
 
 async def gblacker(event, type_):
@@ -746,8 +746,8 @@ async def gblacker(event, type_):
             return await event.eor(f"**ERROR**\n`{str(e)}`")
     except IndexError:
         chat_id = event.chat_id
-    if type_ == "add":
+    if type_ == "ᴅɪᴍᴀꜱᴜᴋᴋᴀɴ":
         keym.add(chat_id)
-    elif type_ == "remove":
+    elif type_ == "ʙᴇʙᴀꜱ":
         keym.remove(chat_id)
-    await event.eor(f"Global Broadcasts: \n{type_}ed {chat_id}")
+    await event.reply(f"​❍\n├🇬​​🇷​​🇺​​🇵​ ​🇮​​🇳​​🇮​❖⠇{chat_id}⠇\n❍\n├ᴛᴇʟᴀʜ {type_} ᴅᴀʟᴀᴍ ​\n𝄃𝄃🇸​​🇭​​🇦​​🇩​​🇴​​🇼​𝄃𝄃\n ​🇷​​🇪​​🇦​​🇱​​🇲​")
