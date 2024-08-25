@@ -48,7 +48,7 @@ from . import (
 def check_command(command):
     return shutil.which(command) is not None
     
-@erubot_cmd(pattern="update( (.*)|$)")
+@erubot_cmd(pattern="up( (.*)|$)")
 async def _(e):
     xx = await e.reply(get_string("upd_1"))
     if e.pattern_match.group(1).strip() and (
