@@ -77,10 +77,10 @@ async def _(event):
     xx = await event.reply(get_string("com_1"))
     reply_to_id = event.reply_to_msg_id or event.id
     stdout, stderr = await bash(cmd, run_code=1)
-    OUT = f"<b>⊙ BASH<b>\n\n• COMMAND:**\n<blockquote>`{cmd}` </blockquote>\n\n"
+    OUT = f"<b>⊙ BASH</b>\n\n• COMMAND:<\n<blockquote>`{cmd}` </blockquote>\n\n"
     err, out = "", ""
     if stderr:
-        err = f"**• ERROR:** \n`{stderr}`\n\n"
+        err = f"<b>• ERROR GOBLOK:</b> \n`{stderr}`\n\n"
     if stdout:
         if (carb or udB.get_key("CARBON_ON_BASH")) and (
             event.is_private
